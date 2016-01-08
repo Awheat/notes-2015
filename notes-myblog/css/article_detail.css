@@ -1,0 +1,46 @@
+@charset "utf-8";
+/*
++--------------------------------------------------------------------
++	@Project:  wuwc_bolg
++	@Date:     2015/07/28 AM -- 2015/07/31 AM
++	@Author:   wuwangcheng
++	@Email:    395212731@qq.com
++	@Address   zhongqinghuayun
++-------------------------------------------------------------------=
+*/
+/*
+	文章详细信息
+*/
+.wwc_artdet_info{width:100%;height: 30px;line-height: 30px;text-align: center;margin-top: 10px;border:1px dashed #fff;}
+.wwc_artdet_info span{color: #999;margin-right: 10px;}
+.wwc_art_cont{padding: 20px 10px;box-sizing:border-box;}
+.wwc_art_cont p{color: #eaeaea;text-indent: 20px;margin:15px 0px;}
+.wwc_art_cont p img{display: block;max-width: 600px;max-height: 300px;margin: 0px auto;}
+/*
+	文章其他信息
+*/
+.wwc_artoth_info{width: 100%;height: 30px;line-height: 30px;border:1px dashed #fff;}
+.wwc_artoth_info span{padding: 0px 15px;}
+.wwc_artoth_info span.icon-calculator{float: right;}
+/*
+	上一篇-下一篇
+*/
+.wwc_nextorprev{width: 100%;padding:10px 0px 0px 0px;}
+.wwc_nextorprev a{color: #fff;}
+.wwc_nextorprev a:hover{color: #f30606;}
+h3.h3_arttitle{width: 100%;height: 30px;line-height: 30px;padding-top: 30px;border-bottom: 1px dashed #fff;}
+/*
+	猜你喜欢
+*/
+.wwc_favart{width: 100%;text-align: center;padding: 2px 0px 10px 0px;}
+.wwc_favart ul li{position: relative;display: inline-block;width: 170px;height: 200px;background: #fff;}
+.wwc_favart ul li:hover span{transition:all .3s ease 0s;text-indent: 10px;}
+.wwc_favart ul li a{position:absolute;display: block;width: 100%;height: 170px;top: 0px;left: 0px;}
+.wwc_favart ul li a img{width: 100%;height: 100%;}
+.wwc_favart ul li span{display: block;position: absolute;width: 100%;height: 30px;line-height: 30px;left: 0px;bottom: 0px;color: #555;padding: 0px 5px;text-overflow:ellipsis;white-space: nowrap;overflow: hidden;transition:all .3s ease 0s;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+/*
+	提示评论
+*/
+.wwc_tips{width: 100%;height: 30px;line-height: 30px;padding: 0px 20px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border:1px dashed #fff;}
+.wwc_tips span.icon-hand-o-up{color: #fff;float: right;cursor: pointer;}
+.wwc_tips span:hover{color: #f30606;}

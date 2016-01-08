@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文章详情页</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/article_detail.css">
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//设置body背景图自适应电脑大小
+			var winWidth = $(window).width(),winHeight = $(window).height();
+			$("#bd_bg").css({width:winWidth,height:winHeight});
+
+			//最新照片各个宽高
+			var t = $(".wwc_new_photo a");
+			t.eq(0).css({width:'118px',height:'120px',marginRight:'2px'});
+			t.eq(1).css({width:'59px',height:'60px',marginRight:'1px'});
+			t.eq(2).css({width:'59px',height:'60px',marginLeft:'1px'});
+			t.eq(3).css({width:'120px',height:'58px',marginTop:'2px'});
+		});
+	</script>
+</head>
+<body id="bd_bg">
+<div id="Container">
+	<!-- wwc-top[ -->
+	<div class="wwc_top clear">
+		<div class="wwc_toplt">
+			<h3>遇见恩典</h3>
+			<p>___________你的话是我脚前的灯，路上的光！</p>
+		</div>
+		<div class="wwc_toprt music"><span>Kiss The Rain</span><img src="images/music_start.png"></div>
+	</div><!-- ]wwc-top -->
+	<!-- wwc_nav[ -->
+	<div class="wwc_nav">
+		<ul>
+			<li><a href="#" class="nav_cur">首页</a></li>
+			<li><a href="#">标签</a></li>
+			<li><a href="#">生活</a></li>
+			<li><a href="#">照片</a></li>
+			<li><a href="#">音乐</a></li>
+			<li><a href="#">留言</a></li>
+			<li><a href="#">关于</a></li>
+		</ul>
+	</div><!-- ]wwc_nav -->
+	<!-- 随机发图[ -->
+	<div class="wwc_rand_pic">
+		<img src="images/10.jpg" alt="">
+	</div><!-- ]随机发图 -->
+	<!-- 详细位置[ -->
+	<div class="wwc_sub_nav">
+		<div class="wwc_sn_lt"><label class="icon-map-marker">&nbsp;您当前的位置：</label><span>首页 > 慢生活 > 日记</span></div>
+		<div class="wwc_sn_rt">我的心如禁闭的井 。</div>
+	</div><!-- ]详细位置 -->
+	<!-- wwc_main[ -->
+	<div class="wwc_main clear">
+		<!-- wwc_mlt[ -->
+		<div class="wwc_mlt">
+			<h3 class="h3_title">个人资料</h3>
+			<div class="lt_column wwc_detail_info">
+				<p><label class="icon-diamond">昵称：</label><span>wuwangcheng</span></p>
+				<p><label class="icon-diamond">性别：</label><span>male</span></p>
+				<p><label class="icon-diamond">信仰：</label><span>耶稣基督</span></p>
+				<p><label class="icon-diamond">邮箱：</label><span>395212731@qq.com</span></p>
+				<p><label class="icon-diamond">居住：</label><span>北京海淀</span></p>
+				<p><label class="icon-diamond">爱好：</label><span>音乐，运动，户外，美食，敬拜，赞美！</span></p>
+			</div>
+			<h3 class="h3_title">最新文章</h3>
+			<div class="lt_column wwc_new_art">
+				<ul>
+					<li><i class="icon-caret-right"></i><a href="#">Column 三栏布局 个人网站模板</a></li>
+					<li><i class="icon-caret-right"></i><a href="#">with love for you 个人网站模板</a></li>
+					<li><i class="icon-caret-right"></i><a href="#">免费收录网站搜索引擎登录口大全</a></li>
+					<li><i class="icon-caret-right"></i><a href="#">做网站到底需要什么?</a></li>
+					<li><i class="icon-caret-right"></i><a href="#">企业做网站具体流程步骤</a></li>
+					<li><i class="icon-caret-right"></i><a href="#">建站流程篇——教你如何快速学会做网站</a></li>
+					<li><i class="icon-caret-right"></i><a href="#">box-shadow 阴影右下脚折边效果</a></li>
+					<li><i class="icon-caret-right"></i><a href="#">打雷时室内、户外应该需要注意什么</a></li>
+				</ul>
+			</div>
+			<h3 class="h3_title">点击排行</h3>
+			<div class="lt_column wwc_click_ph">
+				<ul>
+					<li><i class="icon-fire"></i><a href="#">Column 三栏布局 个人网站模板</a></li>
+					<li><i class="icon-heart-o"></i><a href="#">with love for you 个人网站模板</a></li>
+					<li><i class="icon-heart-o"></i><a href="#">免费收录网站搜索引擎登录口大全</a></li>
+					<li><i class="icon-heart-o"></i><a href="#">做网站到底需要什么?</a></li>
+					<li><i class="icon-heart-o"></i><a href="#">企业做网站具体流程步骤</a></li>
+				</ul>
+			</div>
+			<h3 class="h3_title">最新照片</h3>
+			<div class="wwc_new_photo clear">
+				<a href="#"><img src="images/t1.jpg" alt=""></a>
+				<a href="#"><img src="images/t1.jpg" alt=""></a>
+				<a href="#"><img src="images/t1.jpg" alt=""></a>
+				<a href="#"><img src="images/t1.jpg" alt=""></a>
+			</div>
+			<h3 class="h3_title">友情链接</h3>
+			<div class="lt_column wwc_friend_link">
+				<ul>
+					<li><a href="#">遇见恩典</a></li>
+					<li><a href="#">以马内利</a></li>
+					<li><a href="#">如烟往事</a></li>
+					<li><a href="#">木子/MuZi</a></li>
+					<li><a href="#">耶和华以勒</a></li>
+				</ul>
+			</div>
+			<h3 class="h3_title">联系我</h3>
+			<div class="wwc_content_me">
+				<a href="#" class="icon-qq"></a>
+				<a href="#" class="icon-weixin"></a>
+				<a href="#" class="icon-wechat"></a>
+				<a href="#" class="icon-tencent-weibo"></a>
+			</div>
+		</div><!-- ]wwc_mlt -->
+		<!-- wwc_mrt[ -->
+		<div class="wwc_mrt">
+			<!-- 文章详细信息[ -->
+			<h1 class="h1_title">爱情不容有错，即使错了那就重来</h3>
+			<div class="wwc_artdet_info"><span>发布时间：2013-07-28</span><span>编辑：吴忘成</span><span>类别：生活随记</span></div>
+			<div class="wwc_art_cont">
+				<p>
+					进一好友空间，再一次看到她置顶的那一篇《他和她的故事》爱情在他俩的生活中经历了不少分分合合，但最后俩人还是走在了一起。当今天再一次阅读的时候，我没有第一次那么感性，我注重他们俩曲折的过程，其中出现过第三者...
+				</p>
+				<p>
+					如果我是她，对于他当初的脚踏两只船、尽管仍然说爱但亦然离开而选择别人，我很肯定我是无法原谅他的，也许你会说是因为我不是真正爱他吧，我也不知道，这是不是因为爱得不够深，不能包容他的过错...我是很小气的人，就像很多人说的那样，一年365天，你364天对她好，只要有一天对她不好，她也会在n天也许n年后提出来，你哪天对我不好。
+				</p>
+				<p><img src="images/10.jpg"></p>
+				<p>
+					大学时跟我分分合合的男朋友，却是这么一个爱犯错的人。跟他交往，会有意无意的伤到我自尊，至今我也那么认为那伤害了我的自尊。在我骨子里有一种骄傲和很强的自尊，而他却偏偏伤了一次又一次。他的朋友都说我小气，我至今也觉得如果我不小气，那就是我傻！
+				</p>
+				<p>
+					我认为大学时的恋爱，是毕业前进入社会的一次恋爱实习。参杂了很多的疑问和抉择。就像工作，从销售到文员到编辑到技术员，最后才知道什么工作适合自己。找一个人陪你恋爱实习，也许很简单，也许很难。
+				</p>
+				<p>
+					这么多年过去了，当初分手都会舍不得那段4年的感情，后来也是时间煮了这段记忆。现在我们各自有了各自的生活，他也找到了他心仪的女孩，我能感觉出他们俩很相爱，当初最后一次分手的过渡时间，无论有多么的不舍与难熬，现在看看都是正确的。
+				</p>
+				<p>
+					我认为大学时的恋爱，是毕业前进入社会的一次恋爱实习。参杂了很多的疑问和抉择。就像工作，从销售到文员到编辑到技术员，最后才知道什么工作适合自己。找一个人陪你恋爱实习，也许很简单，也许很难。
+				</p>
+				<p>
+					为何我会毅然放弃，因为在我心里，那些过去的伤，那些不好的记忆永远都抹不去，我无法面对，哪怕是当初妥协了，我想最后我也一定会再一次选择放弃....
+				</p>
+				<p>
+					我觉得爱情也可以重新来过，只是换换主角罢了...
+				</p>
+			</div><!-- 文章详细信息[ -->
+			<!-- 其他信息[ -->
+			<div class="wwc_artoth_info"><span class="icon-location-arrow">&nbsp;win7</span>|<span class="icon-map-marker">&nbsp;湖北武汉</span><span class="icon-calculator">&nbsp;字数：555字</span></div>
+			<!-- 上一篇-下一篇 -->
+			<p class="wwc_nextorprev"><span>上一篇：</span><a href="#">程序员应该如何高效的工作学习</a></p>
+			<p class="wwc_nextorprev"><span>下一篇：</span><a href="#">柴米油盐的生活才是真实</a></p>
+			<!-- 猜你喜欢[ -->
+			<h3 class="h3_arttitle">您可能还喜欢：</h3>
+			<div class="wwc_favart">
+				<ul>
+					<li>
+						<a href="#"><img src="images/t1.jpg"></a>
+						<span>当我想你的时候</span>
+					</li>
+					<li>
+						<a href="#"><img src="images/t1.jpg"></a>
+						<span>当我想你的时候</span>
+					</li>
+					<li>
+						<a href="#"><img src="images/t1.jpg"></a>
+						<span>当我想你的时候</span>
+					</li>
+					<li>
+						<a href="#"><img src="images/t1.jpg"></a>
+						<span>当我想你的时候当我想你的时候</span>
+					</li>
+				</ul>
+			</div><!-- ]猜你喜欢 -->
+			<p class="wwc_tips">亲！沙发还空着呢？还不赶快来抢！<span class="icon-hand-o-up">&nbsp;我要评论</span></p>
+		</div><!-- ]wwc_mrt -->
+	</div><!-- ]wwc_main -->
+	<!-- wwc_footer[ -->
+	<div class="wwc_footer">CopyRight©2015 - 2016</div><!-- ]wwc_footer -->
+</div>
+<div id="bd_pf"></div>
+</body>
+</html>

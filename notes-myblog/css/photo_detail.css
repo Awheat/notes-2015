@@ -1,0 +1,42 @@
+
+@charset "utf-8";
+/*
++--------------------------------------------------------------------
++	@Project:  wuwc_bolg
++	@Date:     2015/07/28 AM -- 2015/07/31 AM
++	@Author:   wuwangcheng
++	@Email:    395212731@qq.com
++	@Address   zhongqinghuayun
++-------------------------------------------------------------------=
+*/
+/*
+	相册列表
+*/
+.wwc_photos{width: 100%;}
+.wwc_photos:after{display: table;content: "";clear: both;}
+.wwc_photos li{position: relative;width: 170px;height: 200px;padding: 3px;float: left;margin-right:14px;margin-bottom: 10px;overflow: hidden;border:1px solid #aba3a3;}
+.wwc_photos li:hover .wwwc_mask_photo{left: 0px;transform:rotate(0deg);-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg);}
+.wwc_photos li > img{width: 100%;height:160px;}
+.wwc_photos li .wwc_pldetail{width: 100%;}
+.wwc_photos li .wwc_pldetail p{width:100%;}
+.wwc_photos li .wwc_pldetail p.wwc_pld_title{line-height:18px;text-overflow:ellipsis;white-space: nowrap;overflow: hidden;}
+.wwc_photos li .wwc_pldetail p.wwc_oth_info{line-height: 20px;color:#ccc;font-size: 12px;}
+.wwc_photos li .wwc_pldetail p.wwc_oth_info span{display: block;}
+.wwc_photos li .wwc_pldetail p.wwc_oth_info span.sp_lt{float:left;}
+.wwc_photos li .wwc_pldetail p.wwc_oth_info span.sp_rt{float:right;}
+.wwwc_mask_photo{position: absolute;width: 100%;height: 100%;line-height: 200px;text-align: center;top: 0px;left:-190px;filter:alpha(opacity=50);background:rgba(0,0,0,0.6);transition:transform .3s linear 0s;-moz-transition:transform .3s linear 0s;-webkit-transition:transform .3s linear 0s;background-color: #000\9;transform:rotate(-90deg);-moz-transform:rotate(-90deg);-webkit-transform:rotate(-90deg);}
+.wwwc_mask_photo > span{display: inline-block;width: 50px;height: 50px;cursor: pointer;text-align: center;color: #fff;font-size:30px;}
+/*
+	照片列表
+*/
+.wwc_photo_list{width: 100%;display: none;}
+.wwc_photo_list li{width:140px;height: 170px;float: left;margin-bottom: 10px;cursor: pointer;margin-right:20px;background: #fff;}
+.wwc_photo_list li img{display: block;width: 100%;height: 145px;float: left;}
+.wwc_photo_list li span{display: block;width:100%;height: 25px;line-height: 25px;text-align: center;color: #000;text-overflow:ellipsis;white-space: nowrap;overflow: hidden;}
+/*
+	mask
+*/
+#mask{position: fixed;width: 100%;height: 100%;z-index: 1000;opacity: 0.6;filter:alpha(opacity=60);display: none;background: #000;}
+.wwc_show_photo{position: fixed;display: inline-block;padding: 30px;text-align: center;z-index: 1100;display: none;background: #fff;}
+.wwc_show_photo img{max-width: 900px;max-height: 500px;}
+.wwc_show_photo .icon_close{position: fixed;width: 36px;height: 37px;top:30px;right:30px;cursor: pointer;background: url("../images/iv_close.png");}

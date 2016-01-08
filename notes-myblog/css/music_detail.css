@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*
++--------------------------------------------------------------------
++	@Project:  wuwc_bolg
++	@Date:     2015/07/28 AM -- 2015/07/31 AM
++	@Author:   wuwangcheng
++	@Email:    395212731@qq.com
++	@Address   zhongqinghuayun
++-------------------------------------------------------------------=
+*/
+/*
+	曲目列表及歌曲详细信息
+*/
+.wwc_music_lt{width: 730px;float: left;}
+.wwc_music_lt .scroll1 .sly ul{width: 100%;}
+.wwc_music_lt .scroll1 .sly ul li{width: 100%;padding:10px 0px;border-bottom: 1px solid #666;}
+.wwc_music_lt .scroll1 .sly ul li:after{display: table;content: "";clear:both;}
+em.icon-heart-o{margin-right: 15px;color: #777777;}
+.wwc_music_lt .scroll1 .sly ul li span{display: block;float: left;cursor: pointer;}
+.wwc_music_lt .scroll1 .sly ul li span.wwc_ml_sp1{width:60%;}
+.wwc_music_lt .scroll1 .sly ul li span.wwc_ml_sp2{width:20%;text-align: center;}
+.wwc_music_lt .scroll1 .sly ul li span.wwc_ml_sp3{width:20%;text-align: right;}
+.wwc_music_lt .scroll1 .sly ul li span.wwc_ml_sp3 i{color: #777777;padding-left: 10px;cursor: pointer;}
+.wwc_music_lt .scroll1 .sly ul li span.wwc_ml_sp3 i:hover{color: #fff;}
+.wwc_music_rt{width:210px;height: 550px;float: right;}
+.wwc_music_rt .scroll2 .sly div a > img{width: 100%;height: 150px;}
+.wwc_music_rt .scroll2 .sly div span{display: block;width: 100%;line-height: 25px;text-align: center;}
+.wwc_music_rt .scroll2 .sly div p{text-indent: 20px;color: #aaa;}
+/*
+	控制栏
+*/
+.wwc_music_controller{width: 100%;height: auto;float: left;}
+.wwc_music_controller .wwc_mcr_lt{width: 720px;height: 100%;float: left;}
+.wwc_music_controller .wwc_mcr_lt .wwc_contro_top{width: 100%;}
+.wwc_music_controller .wwc_mcr_lt .wwc_contro_top span{display: block;float: right;margin-top: -7px;}
+.wwc_music_controller .wwc_mcr_lt .wwc_contro_top span i.icon-minus{padding: 0px 20px;font-size:20px;}
+.wwc_music_controller .wwc_mcr_lt .wwc_contro_center{position: relative;width: 100%;height: 5px;margin:5px 0px 10px;opacity: 0.5;cursor: pointer;background: #999;}
+.wwc_music_controller .wwc_mcr_lt .wwc_contro_center span{display: block;position: absolute;width: 200px;height: 5px;background: #fff;}
+.wwc_music_controller .wwc_mcr_lt .wwc_contro_bottom:after{display:table;content: "";clear: both;}
+.wwc_music_controller .wwc_mcr_lt .wwc_contro_bottom .sp_star{float: left;}
+.wwc_music_controller .wwc_mcr_lt .wwc_contro_bottom .sp_end{float: right;}
+.wwc_music_controller .wwc_mcr_rt{width:220px;line-height: 50px;float: right;text-align: center;}
+.wwc_music_controller .wwc_mcr_rt span{font-size: 24px;cursor: pointer;}
+.wwc_music_controller .wwc_mcr_rt .sp_center{padding: 0px 40px;}

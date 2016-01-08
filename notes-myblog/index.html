@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.slides.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//设置body背景图自适应电脑大小
+			var winWidth = $(window).width(),winHeight = $(window).height();
+			$("#bd_bg").css({width:winWidth,height:winHeight});
+
+			//最新照片各个宽高
+			var t = $(".wwc_new_photo a");
+			t.eq(0).css({width:'118px',height:'120px',marginRight:'2px'});
+			t.eq(1).css({width:'59px',height:'60px',marginRight:'1px'});
+			t.eq(2).css({width:'59px',height:'60px',marginLeft:'1px'});
+			t.eq(3).css({width:'120px',height:'58px',marginTop:'2px'});
+			//焦点图
+			$('#slides').slidesjs({width: 960,height:350,play: {auto: true,interval: 4000,swap: true,pauseOnHover:true,restartDelay:1000}});
+		});
+	</script>
+</head>
+<body id="bd_bg">
+<div id="Container">
+	<!-- wwc-top[ -->
+	<div class="wwc_top clear">
+		<div class="wwc_toplt">
+			<h3>遇见恩典</h3>
+			<p>___________你的话是我脚前的灯，路上的光！</p>
+		</div>
+		<div class="wwc_toprt music"><span>Kiss The Rain</span><img src="images/music_start.png"></div>
+	</div><!-- ]wwc-top -->
+	<!-- wwc_nav[ -->
+	<div class="wwc_nav">
+		<ul>
+			<li><a href="#" class="nav_cur">首页</a></li>
+			<li><a href="#">标签</a></li>
+			<li><a href="#">生活</a></li>
+			<li><a href="#">照片</a></li>
+			<li><a href="#">音乐</a></li>
+			<li><a href="#">留言</a></li>
+			<li><a href="#">关于</a></li>
+		</ul>
+	</div><!-- ]wwc_nav -->
+	<!-- wwc_slider(后面有空的话自己写不弄左右滚动的就不存在一下又撤回来为零不好的视觉体验问题了)[ -->
+	<div id="slides">
+		<a href="#"><img src="images/1.jpg"></a>
+		<a href="#"><img src="images/2.jpg"></a>
+		<a href="#"><img src="images/3.jpg"></a>
+	</div><!-- ]wwc_slider -->
+	<!-- wwc_main[ -->
+	<div class="wwc_main clear">
+		<!-- wwc_mlt[ -->
+		<div class="wwc_mlt">
+			<h3 class="h3_title">个人资料</h3>
+			<div class="lt_column wwc_detail_info">
+				<p><label class="icon-diamond">昵称：</label><span>wuwangcheng</span></p>
+				<p><label class="icon-diamond">性别：</label><span>male</span></p>
+				<p><label class="icon-diamond">信仰：</label><span>耶稣基督</span></p>
+				<p><label class="icon-diamond">邮箱：</label><span>395212731@qq.com</span></p>
+				<p><label class="icon-diamond">居住：</label><span>北京海淀</span></p>
+				<p><label class="icon-diamond">爱好：</label><span>音乐，运动，户外，美食，敬拜，赞美！</span></p>
+			</div>
+			<h3 class="h3_title">最新文章</h3>
+			<div class="lt_column wwc_new_art">
+				<ul>
+					<li><i class="icon-caret-right"></i><a href="#">Column 三栏布局 个人网站模板</a></li>
+					<li><i class="icon-caret-right"></i><a href="#">with love for you 个人网站模板</a></li>
+					<li><i class="icon-caret-right"></i><a href="#">免费收录网站搜索引擎登录口大全</a></li>
+					<li><i class="icon-caret-right"></i><a href="#">做网站到底需要什么?</a></li>
+					<li><i class="icon-caret-right"></i><a href="#">企业做网站具体流程步骤</a></li>
+					<li><i class="icon-caret-right"></i><a href="#">建站流程篇——教你如何快速学会做网站</a></li>
+					<li><i class="icon-caret-right"></i><a href="#">box-shadow 阴影右下脚折边效果</a></li>
+					<li><i class="icon-caret-right"></i><a href="#">打雷时室内、户外应该需要注意什么</a></li>
+				</ul>
+			</div>
+			<h3 class="h3_title">点击排行</h3>
+			<div class="lt_column wwc_click_ph">
+				<ul>
+					<li><i class="icon-fire"></i><a href="#">Column 三栏布局 个人网站模板</a></li>
+					<li><i class="icon-heart-o"></i><a href="#">with love for you 个人网站模板</a></li>
+					<li><i class="icon-heart-o"></i><a href="#">免费收录网站搜索引擎登录口大全</a></li>
+					<li><i class="icon-heart-o"></i><a href="#">做网站到底需要什么?</a></li>
+					<li><i class="icon-heart-o"></i><a href="#">企业做网站具体流程步骤</a></li>
+				</ul>
+			</div>
+			<h3 class="h3_title">最新照片</h3>
+			<div class="wwc_new_photo clear">
+				<a href="#"><img src="images/t1.jpg" alt=""></a>
+				<a href="#"><img src="images/t1.jpg" alt=""></a>   
+				<a href="#"><img src="images/t1.jpg" alt=""></a>
+				<a href="#"><img src="images/t1.jpg" alt=""></a>
+			</div>
+			<h3 class="h3_title">友情链接</h3>
+			<div class="lt_column wwc_friend_link">
+				<ul>
+					<li><a href="#">遇见恩典</a></li>
+					<li><a href="#">以马内利</a></li>
+					<li><a href="#">如烟往事</a></li>
+					<li><a href="#">木子/MuZi</a></li>
+					<li><a href="#">耶和华以勒</a></li>
+				</ul>
+			</div>
+			<h3 class="h3_title">联系我</h3>
+			<div class="wwc_content_me">
+				<a href="#" class="icon-qq"></a>
+				<a href="#" class="icon-weixin"></a>
+				<a href="#" class="icon-wechat"></a>
+				<a href="#" class="icon-tencent-weibo"></a>
+			</div>
+		</div><!-- ]wwc_mlt -->
+		<!-- wwc_mrt[ -->
+		<div class="wwc_mrt">
+			<h3 class="h3_title">文章推荐</h3>
+			<!-- 一个文章[ -->
+			<div class="artic_list_item">
+				<a href="#" class="artic_ltim_lt"><img src="images/t1.jpg"></a>
+				<div class="artic_ltim_rt">
+					<h3 class="art_title"><a href="#">蓝天白云，万里晴空。</a></h3>
+					<p class="art_cont">
+						初次相识的喜悦，让你觉得似乎找到了知音。于是，对于投缘的人，开始了较频繁的交往。渐渐地，初识的喜悦退尽，接下来就是仅仅保持着联系，平淡到偶尔在节假曰发短信互致问候...
+					</p>
+					<p class="art_opation">
+						<a href="#" class="a_fmclass"><i class="icon-tag"></i>个人博客</a>
+						<a class="sp_time"><i class="icon-clock-o"></i>2014-02-19</a>
+						<a href="#" class="a_pinlun"><i class="icon-comment"></i>评论(<em>30</em>)</a>
+						<a href="#" class="a_liuluan"><i class="icon-eye"></i>浏览(<em>50</em>)</a>
+					</p>
+				</div>
+			</div><!-- ]一个文章 -->
+			<!-- 一个文章[ -->
+			<div class="artic_list_item">
+				<a href="#" class="artic_ltim_lt"><img src="images/t1.jpg"></a>
+				<div class="artic_ltim_rt">
+					<h3 class="art_title"><a href="#">蓝天白云，万里晴空。</a></h3>
+					<p class="art_cont">
+						初次相识的喜悦，让你觉得似乎找到了知音。于是，对于投缘的人，开始了较频繁的交往。渐渐地，初识的喜悦退尽，接下来就是仅仅保持着联系，平淡到偶尔在节假曰发短信互致问候...
+					</p>
+					<p class="art_opation">
+						<a href="#" class="a_fmclass"><i class="icon-tag"></i>个人博客</a>
+						<a class="sp_time"><i class="icon-clock-o"></i>2014-02-19</a>
+						<a href="#" class="a_pinlun"><i class="icon-comment"></i>评论(<em>30</em>)</a>
+						<a href="#" class="a_liuluan"><i class="icon-eye"></i>浏览(<em>50</em>)</a>
+					</p>
+				</div>
+			</div><!-- ]一个文章 -->
+			<!-- 一个文章[ -->
+			<div class="artic_list_item">
+				<a href="#" class="artic_ltim_lt"><img src="images/t1.jpg"></a>
+				<div class="artic_ltim_rt">
+					<h3 class="art_title"><a href="#">蓝天白云，万里晴空。</a></h3>
+					<p class="art_cont">
+						初次相识的喜悦，让你觉得似乎找到了知音。于是，对于投缘的人，开始了较频繁的交往。渐渐地，初识的喜悦退尽，接下来就是仅仅保持着联系，平淡到偶尔在节假曰发短信互致问候...
+					</p>
+					<p class="art_opation">
+						<a href="#" class="a_fmclass"><i class="icon-tag"></i>个人博客</a>
+						<a class="sp_time"><i class="icon-clock-o"></i>2014-02-19</a>
+						<a href="#" class="a_pinlun"><i class="icon-comment"></i>评论(<em>30</em>)</a>
+						<a href="#" class="a_liuluan"><i class="icon-eye"></i>浏览(<em>50</em>)</a>
+					</p>
+				</div>
+			</div><!-- ]一个文章 -->
+			<!-- 一个文章[ -->
+			<div class="artic_list_item">
+				<a href="#" class="artic_ltim_lt"><img src="images/t1.jpg"></a>
+				<div class="artic_ltim_rt">
+					<h3 class="art_title"><a href="#">蓝天白云，万里晴空。</a></h3>
+					<p class="art_cont">
+						初次相识的喜悦，让你觉得似乎找到了知音。于是，对于投缘的人，开始了较频繁的交往。渐渐地，初识的喜悦退尽，接下来就是仅仅保持着联系，平淡到偶尔在节假曰发短信互致问候...
+					</p>
+					<p class="art_opation">
+						<a href="#" class="a_fmclass"><i class="icon-tag"></i>个人博客</a>
+						<a class="sp_time"><i class="icon-clock-o"></i>2014-02-19</a>
+						<a href="#" class="a_pinlun"><i class="icon-comment"></i>评论(<em>30</em>)</a>
+						<a href="#" class="a_liuluan"><i class="icon-eye"></i>浏览(<em>50</em>)</a>
+					</p>
+				</div>
+			</div><!-- ]一个文章 -->
+			<!-- 一个文章[ -->
+			<div class="artic_list_item">
+				<a href="#" class="artic_ltim_lt"><img src="images/t1.jpg"></a>
+				<div class="artic_ltim_rt">
+					<h3 class="art_title"><a href="#">蓝天白云，万里晴空。</a></h3>
+					<p class="art_cont">
+						初次相识的喜悦，让你觉得似乎找到了知音。于是，对于投缘的人，开始了较频繁的交往。渐渐地，初识的喜悦退尽，接下来就是仅仅保持着联系，平淡到偶尔在节假曰发短信互致问候...
+					</p>
+					<p class="art_opation">
+						<a href="#" class="a_fmclass"><i class="icon-tag"></i>个人博客</a>
+						<a class="sp_time"><i class="icon-clock-o"></i>2014-02-19</a>
+						<a href="#" class="a_pinlun"><i class="icon-comment"></i>评论(<em>30</em>)</a>
+						<a href="#" class="a_liuluan"><i class="icon-eye"></i>浏览(<em>50</em>)</a>
+					</p>
+				</div>
+			</div><!-- ]一个文章 -->
+			<!-- 一个文章[ -->
+			<div class="artic_list_item">
+				<a href="#" class="artic_ltim_lt"><img src="images/t1.jpg"></a>
+				<div class="artic_ltim_rt">
+					<h3 class="art_title"><a href="#">蓝天白云，万里晴空。</a></h3>
+					<p class="art_cont">
+						初次相识的喜悦，让你觉得似乎找到了知音。于是，对于投缘的人，开始了较频繁的交往。渐渐地，初识的喜悦退尽，接下来就是仅仅保持着联系，平淡到偶尔在节假曰发短信互致问候...
+					</p>
+					<p class="art_opation">
+						<a href="#" class="a_fmclass"><i class="icon-tag"></i>个人博客</a>
+						<a class="sp_time"><i class="icon-clock-o"></i>2014-02-19</a>
+						<a href="#" class="a_pinlun"><i class="icon-comment"></i>评论(<em>30</em>)</a>
+						<a href="#" class="a_liuluan"><i class="icon-eye"></i>浏览(<em>50</em>)</a>
+					</p>
+				</div>
+			</div><!-- ]一个文章 -->
+			<!-- 一个文章[ -->
+			<div class="artic_list_item">
+				<a href="#" class="artic_ltim_lt"><img src="images/t1.jpg"></a>
+				<div class="artic_ltim_rt">
+					<h3 class="art_title"><a href="#">蓝天白云，万里晴空。</a></h3>
+					<p class="art_cont">
+						初次相识的喜悦，让你觉得似乎找到了知音。于是，对于投缘的人，开始了较频繁的交往。渐渐地，初识的喜悦退尽，接下来就是仅仅保持着联系，平淡到偶尔在节假曰发短信互致问候...
+					</p>
+					<p class="art_opation">
+						<a href="#" class="a_fmclass"><i class="icon-tag"></i>个人博客</a>
+						<a class="sp_time"><i class="icon-clock-o"></i>2014-02-19</a>
+						<a href="#" class="a_pinlun"><i class="icon-comment"></i>评论(<em>30</em>)</a>
+						<a href="#" class="a_liuluan"><i class="icon-eye"></i>浏览(<em>50</em>)</a>
+					</p>
+				</div>
+			</div><!-- ]一个文章 -->
+			<!-- 一个文章[ -->
+			<div class="artic_list_item">
+				<a href="#" class="artic_ltim_lt"><img src="images/t1.jpg"></a>
+				<div class="artic_ltim_rt">
+					<h3 class="art_title"><a href="#">蓝天白云，万里晴空。</a></h3>
+					<p class="art_cont">
+						初次相识的喜悦，让你觉得似乎找到了知音。于是，对于投缘的人，开始了较频繁的交往。渐渐地，初识的喜悦退尽，接下来就是仅仅保持着联系，平淡到偶尔在节假曰发短信互致问候...
+					</p>
+					<p class="art_opation">
+						<a href="#" class="a_fmclass"><i class="icon-tag"></i>个人博客</a>
+						<a class="sp_time"><i class="icon-clock-o"></i>2014-02-19</a>
+						<a href="#" class="a_pinlun"><i class="icon-comment"></i>评论(<em>30</em>)</a>
+						<a href="#" class="a_liuluan"><i class="icon-eye"></i>浏览(<em>50</em>)</a>
+					</p>
+				</div>
+			</div><!-- ]一个文章 -->
+			<!-- 分页[ -->
+			<div class="wwc_page">
+				<a href="#">首页</a>
+				<a href="#" class="page_cur">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+			    <a href="#">6</a>
+				<a href="#">7</a>
+				<a href="#">末页</a>
+			</div><!-- ]分页 -->
+		</div><!-- ]wwc_mrt -->
+	</div><!-- ]wwc_main -->
+	<!-- wwc_footer[ -->
+	<div class="wwc_footer">CopyRight©2015 - 2016</div><!-- ]wwc_footer -->
+</div>
+<div id="bd_pf"></div>
+</body>
+</html>

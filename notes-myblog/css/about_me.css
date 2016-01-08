@@ -1,0 +1,34 @@
+@charset "utf-8";
+/*
++--------------------------------------------------------------------
++	@Project:  wuwc_bolg
++	@Date:     2015/07/28 AM -- 2015/07/31 AM
++	@Author:   wuwangcheng
++	@Email:    395212731@qq.com
++	@Address   zhongqinghuayun
++-------------------------------------------------------------------=
+*/
+/*
+	¥ª£
+*/
+.wwc_main .wwc_mt_lt{width: 300px;float: left;padding: 0px 5px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border-right:1px dashed #fff;}
+.wwc_main .wwc_mt_lt .wwc_msg_img{width: 100%;height:350px;}
+.wwc_main .wwc_mt_lt .wwc_msg_img img{width: 100%;height: 100%;}
+.wwc_main .wwc_mt_lt dl{width: 100%;padding-top:30px;}
+.wwc_main .wwc_mt_lt dl dt{width:100%;height: 30px;line-height: 30px;font-weight: 700;border-bottom:1px dashed #fff;}
+.wwc_main .wwc_mt_lt dl dd{padding-top:10px;}
+.wwc_main .wwc_mt_lt dl dd p{width: 100%;line-height: 30px;}
+.wwc_main .wwc_mt_lt dl dd p.wwc_weixin{width:180px;height:200px;}
+.wwc_main .wwc_mt_lt dl dd p.wwc_weixin img{width:100%;height:100%;}
+/*
+	¥k£
+*/
+.wwc_main .wwc_mt_rt{width:650px;float: left;padding-left: 25px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+.wwc_main .wwc_mt_rt .wwc_am_title{width: 100%;line-height: 15px;padding-bottom: 20px;color:#fff;}
+.wwc_main .wwc_mt_rt > p{width: 100%;height: 25px;line-height: 25px;}
+.wwc_main .wwc_mt_rt p label{color: #999;}
+.wwc_main .wwc_mt_rt p span{color: #fff;}
+.wwc_main .wwc_mt_rt dl{width: 100%;}
+.wwc_main .wwc_mt_rt dl dt{width: 100%;line-height: 30px;border-bottom: 1px dashed #fff;color: #999;}
+.wwc_main .wwc_mt_rt dl dd{color: #fff;padding:10px 0px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+.wwc_main .wwc_mt_rt dl dd p{text-indent: 20px;margin-bottom: 20px;}

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>音乐列表</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/music_detail.css">
+	<link rel="stylesheet" type="text/css" href="css/scroll.css">
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.sly.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing-1.3.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//设置body背景图自适应电脑大小
+			var winWidth = $(window).width(),winHeight = $(window).height();
+			$("#bd_bg").css({width:winWidth,height:winHeight});
+
+			//鼠标放入指定区域是显示滚动条
+			$(".scrollbox").hover(function(){
+				$(this).find('div.scrollbar').fadeIn('1000');
+			},function(){
+				$(this).find('div.scrollbar').fadeOut('fast');
+			});
+		});
+	</script>
+</head>
+<body id="bd_bg">
+<div id="Container">
+	<!-- wwc-top[ -->
+	<div class="wwc_top clear">
+		<div class="wwc_toplt">
+			<h3>遇见恩典</h3>
+			<p>___________你的话是我脚前的灯，路上的光！</p>
+		</div>
+	</div><!-- ]wwc-top -->
+	<!-- wwc_nav[ -->
+	<div class="wwc_nav">
+		<ul>
+			<li><a href="#" class="nav_cur">首页</a></li>
+			<li><a href="#">标签</a></li>
+			<li><a href="#">生活</a></li>
+			<li><a href="#">照片</a></li>
+			<li><a href="#">音乐</a></li>
+			<li><a href="#">留言</a></li>
+			<li><a href="#">关于</a></li>
+		</ul>
+	</div><!-- ]wwc_nav -->
+	
+	<!-- 详细位置[ -->
+	<div class="wwc_sub_nav">
+		<div class="wwc_sn_lt"><label class="icon-map-marker">&nbsp;您当前的位置：</label><span>首页 > 关于我</span></div>
+		<div class="wwc_sn_rt">我的心如禁闭的井 。</div>
+	</div><!-- ]详细位置 -->
+	<!-- wwc_main[ -->
+	<div class="wwc_main clear">
+		<!-- 曲目列表[ -->
+		<div class="wwc_music_lt scrollbox">
+			<div class="slyWrap scroll1">
+				<div class="scrollbar"><div class="handle"></div></div>
+				<div class="sly" data-options='{ "scrollBy": 100, "startAt": 200 }'>
+					<ul>
+						<li><span class="wwc_ml_sp1">曲目</span><span class="wwc_ml_sp2">艺人</span></li>
+						<li>
+							<span class="wwc_ml_sp1"><em class="icon-heart-o"></em>01.&nbsp;旅程</span>
+							<span class="wwc_ml_sp2">by许巍</span>
+							<span class="wwc_ml_sp3"><i class="icon-download"></i><i class="icon-qq"></i><i class="icon-weibo"></i><i class="icon-tencent-weibo"></i></span>
+						</li>
+						<li>
+							<span class="wwc_ml_sp1"><em class="icon-heart-o"></em>01.&nbsp;旅程</span>
+							<span class="wwc_ml_sp2">by许巍</span>
+							<span class="wwc_ml_sp3"><i class="icon-download"></i><i class="icon-qq"></i><i class="icon-weibo"></i><i class="icon-tencent-weibo"></i></span>
+						</li>
+						<li>
+							<span class="wwc_ml_sp1"><em class="icon-heart-o"></em>01.&nbsp;旅程</span>
+							<span class="wwc_ml_sp2">by许巍</span>
+							<span class="wwc_ml_sp3"><i class="icon-download"></i><i class="icon-qq"></i><i class="icon-weibo"></i><i class="icon-tencent-weibo"></i></span>
+						</li>
+						<li>
+							<span class="wwc_ml_sp1"><em class="icon-heart-o"></em>01.&nbsp;旅程</span>
+							<span class="wwc_ml_sp2">by许巍</span>
+							<span class="wwc_ml_sp3"><i class="icon-download"></i><i class="icon-qq"></i><i class="icon-weibo"></i><i class="icon-tencent-weibo"></i></span>
+						</li>
+						<li>
+							<span class="wwc_ml_sp1"><em class="icon-heart-o"></em>01.&nbsp;旅程</span>
+							<span class="wwc_ml_sp2">by许巍</span>
+							<span class="wwc_ml_sp3"><i class="icon-download"></i><i class="icon-qq"></i><i class="icon-weibo"></i><i class="icon-tencent-weibo"></i></span>
+						</li>
+						<li>
+							<span class="wwc_ml_sp1"><em class="icon-heart-o"></em>01.&nbsp;旅程</span>
+							<span class="wwc_ml_sp2">by许巍</span>
+							<span class="wwc_ml_sp3"><i class="icon-download"></i><i class="icon-qq"></i><i class="icon-weibo"></i><i class="icon-tencent-weibo"></i></span>
+						</li>
+						<li>
+							<span class="wwc_ml_sp1"><em class="icon-heart-o"></em>01.&nbsp;旅程</span>
+							<span class="wwc_ml_sp2">by许巍</span>
+							<span class="wwc_ml_sp3"><i class="icon-download"></i><i class="icon-qq"></i><i class="icon-weibo"></i><i class="icon-tencent-weibo"></i></span>
+						</li>
+						<li>
+							<span class="wwc_ml_sp1"><em class="icon-heart-o"></em>01.&nbsp;旅程</span>
+							<span class="wwc_ml_sp2">by许巍</span>
+							<span class="wwc_ml_sp3"><i class="icon-download"></i><i class="icon-qq"></i><i class="icon-weibo"></i><i class="icon-tencent-weibo"></i></span>
+						</li>
+						<li>
+							<span class="wwc_ml_sp1"><em class="icon-heart-o"></em>01.&nbsp;旅程</span>
+							<span class="wwc_ml_sp2">by许巍</span>
+							<span class="wwc_ml_sp3"><i class="icon-download"></i><i class="icon-qq"></i><i class="icon-weibo"></i><i class="icon-tencent-weibo"></i></span>
+						</li>
+						<li>
+							<span class="wwc_ml_sp1"><em class="icon-heart-o"></em>01.&nbsp;旅程</span>
+							<span class="wwc_ml_sp2">by许巍</span>
+							<span class="wwc_ml_sp3"><i class="icon-download"></i><i class="icon-qq"></i><i class="icon-weibo"></i><i class="icon-tencent-weibo"></i></span>
+						</li>
+						<li>
+							<span class="wwc_ml_sp1"><em class="icon-heart-o"></em>01.&nbsp;旅程</span>
+							<span class="wwc_ml_sp2">by许巍</span>
+							<span class="wwc_ml_sp3"><i class="icon-download"></i><i class="icon-qq"></i><i class="icon-weibo"></i><i class="icon-tencent-weibo"></i></span>
+						</li>
+						<li>
+							<span class="wwc_ml_sp1"><em class="icon-heart-o"></em>01.&nbsp;旅程</span>
+							<span class="wwc_ml_sp2">by许巍</span>
+							<span class="wwc_ml_sp3"><i class="icon-download"></i><i class="icon-qq"></i><i class="icon-weibo"></i><i class="icon-tencent-weibo"></i></span>
+						</li>
+						<li>
+							<span class="wwc_ml_sp1"><em class="icon-heart-o"></em>01.&nbsp;旅程</span>
+							<span class="wwc_ml_sp2">by许巍</span>
+							<span class="wwc_ml_sp3"><i class="icon-download"></i><i class="icon-qq"></i><i class="icon-weibo"></i><i class="icon-tencent-weibo"></i></span>
+						</li>
+						<li>
+							<span class="wwc_ml_sp1"><em class="icon-heart-o"></em>01.&nbsp;旅程</span>
+							<span class="wwc_ml_sp2">by许巍</span>
+							<span class="wwc_ml_sp3"><i class="icon-download"></i><i class="icon-qq"></i><i class="icon-weibo"></i><i class="icon-tencent-weibo"></i></span>
+						</li>
+					</ul>
+				</div>
+			</div><!--example1 end-->
+		</div><!-- 曲目列表 -->
+		<!-- 显示歌词及其他信息[ -->
+		<div class="wwc_music_rt scrollbox">
+			<div class="slyWrap scroll2">
+				<div class="sly" data-options='{ "scrollBy": 100, "startAt": 200 }'>
+					<div>
+						<a href="#"><img src="images/8.jpg"></a>
+						<span>迷雾森林</span>
+						<span>班得瑞</span>
+						<span>钢琴音乐</span>
+						<p>疗伤系音乐家米拉（林慧玲）的爱与希望</p>
+						<p>一个女孩的心灵成长故事</p>
+						<p>献给所有遇见的纯真与梦想</p>
+						<p>10首纯净的钢琴音乐及2首另人惊艳的演唱曲，12幅米拉的故事画，像动物的眼神一样干净。就让你我心中的米拉上路，走进米拉的音乐城堡，一起相遇米拉拉。</p>
+						<p>10首纯净的钢琴音乐及2首另人惊艳的演唱曲，12幅米拉的故事画，像动物的眼神一样干净。就让你我心中的米拉上路，走进米拉的音乐城堡，一起相遇米拉拉。</p>
+						<p>10首纯净的钢琴音乐及2首另人惊艳的演唱曲，12幅米拉的故事画，像动物的眼神一样干净。就让你我心中的米拉上路，走进米拉的音乐城堡，一起相遇米拉拉。</p>
+						<p>10首纯净的钢琴音乐及2首另人惊艳的演唱曲，12幅米拉的故事画，像动物的眼神一样干净。就让你我心中的米拉上路，走进米拉的音乐城堡，一起相遇米拉拉。</p>
+						<p>10首纯净的钢琴音乐及2首另人惊艳的演唱曲，12幅米拉的故事画，像动物的眼神一样干净。就让你我心中的米拉上路，走进米拉的音乐城堡，一起相遇米拉拉。</p>
+						<p>10首纯净的钢琴音乐及2首另人惊艳的演唱曲，12幅米拉的故事画，像动物的眼神一样干净。就让你我心中的米拉上路，走进米拉的音乐城堡，一起相遇米拉拉。</p>
+						<p>10首纯净的钢琴音乐及2首另人惊艳的演唱曲，12幅米拉的故事画，像动物的眼神一样干净。就让你我心中的米拉上路，走进米拉的音乐城堡，一起相遇米拉拉。</p>
+						<p>10首纯净的钢琴音乐及2首另人惊艳的演唱曲，12幅米拉的故事画，像动物的眼神一样干净。就让你我心中的米拉上路，走进米拉的音乐城堡，一起相遇米拉拉。</p>
+						<p>米拉是个爱画画、爱弹琴、爱唱歌跳舞、喜欢幻想的大女孩。像所有女孩一样，她的日子虽有风雨，也常有彩虹晴空。她玩音乐、做音乐、出专辑，和最爱的人、最爱的狗与猫乐在生活中。</p>
+				
+					</div>
+				</div>
+				<div class="scrollbar"><div class="handle"></div></div>
+			</div>
+		</div><!-- ]显示歌词及其他信息 -->
+		<!-- 控制栏(如上一首下一首)[ -->
+		<div class="wwc_music_controller">
+			<div class="wwc_mcr_lt">
+				<p class="wwc_contro_top">风居住的地方<span><i class="icon-volume-up"></i><i class="icon-minus"></i><i class="icon-random"></i></span></p>
+				<p class="wwc_contro_center"><span></span></p>
+				<p class="wwc_contro_bottom"><span class="sp_star">00:00</span><span class="sp_end">03:39</span></p>
+			</div>
+			<div class="wwc_mcr_rt"><span class="icon-backward"></span><span class="icon-pause sp_center"></span><span class="icon-forward"></span></div>
+		</div><!-- ]控制栏(如上一首下一首) -->
+	</div><!-- ]wwc_main -->
+	<!-- wwc_footer[ -->
+	<div class="wwc_footer">CopyRight©2015 - 2016</div><!-- ]wwc_footer -->
+</div>
+<div id="bd_pf"></div>
+<script type="text/javascript">
+/*
+	美化模拟滚动条的js-code
+*/
+$(function($){function populate(container,count,offset){var output="";offset=isNaN(offset)?0:offset;for(var i=0;i<count;i++){output+="<li>"+(offset+i)+"</li>"}return $(output).appendTo(container)}$("ul[data-items]").each(function(i,e){var items=parseInt($(e).data("items"),10);populate(e,items)});$(document).on("activated",function(event){var $section=$(".scrollbox");var $frame=$section.find(".frame"),$ul=$frame.find("ul").eq(0),$scrollbar=$section.find(".scrollbar"),$buttons=$section.find(".controlbar [data-action]");populate($ul,10);$section.find(".slyWrap").each(function(i,e){var cont=$(this),frame=cont.find(".sly"),slidee=frame.find("ul"),scrollbar=cont.find(".scrollbar"),pagesbar=cont.find(".pages"),options=frame.data("options"),controls=cont.find(".controls"),prevButton=controls.find(".prev"),nextButton=controls.find(".next"),prevPageButton=controls.find(".prevPage"),nextPageButton=controls.find(".nextPage");options=$.extend({},options,{scrollBar:scrollbar,pagesBar:pagesbar,prev:prevButton,next:nextButton,prevPage:prevPageButton,nextPage:nextPageButton,disabledClass:"btn-disabled"});frame.sly(options);cont.find("button").click(function(){var action=$(this).data("action"),arg=$(this).data("arg");switch(action){case"add":slidee.append(slidee.children().slice(-1).clone().removeClass().text(function(i,text){return text/1+1}));frame.sly("reload");break;case"remove":slidee.find("li").slice(-1).remove();frame.sly("reload");break;default:frame.sly(action,arg)}})})}).trigger("activated")});
+</script>
+</body>
+</html>
