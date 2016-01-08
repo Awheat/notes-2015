@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base1.css">
+    <link rel="stylesheet" href="css/index1.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/html5.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript">
+        $(function(){
+           //设置w_cont_top的高度自适应整个屏幕
+           $(".w_cont_top").height($(window).height());
+           $(window).resize(function(){
+                $(".w_cont_top").height($(window).height());
+           });
+           //滚动条监听事件
+           window.onscroll=function(){
+           var scrollTop = $(window).scrollTop(),h = $(".w_header");
+               if(scrollTop>10){
+                   h.addClass("w_header_fix");
+               }else{
+                   h.removeClass("w_header_fix"); 
+               }
+               
+               if(scrollTop>450){
+                 $(".w_music_item").addClass("wmi_active");
+               }
+           }
+           
+           
+           //文字展示焦点
+           var s_ul = $(".slider"),
+               s_li = s_ul.find('li'),
+               s_len = s_li.length,
+               s_ind = $("li.li_curr").index();
+               s_ul.width(s_li.width() * s_len);
+           var c_nav = $(".control_nav"),c_sp = c_nav.find('span');
+               function play(){
+                  s_ul.animate({
+                      marginLeft:-s_li.width()
+                  },1000,"easeOutQuad",function(){
+                    s_ul.css("margin-left","0px").find('li:first').appendTo(s_ul);
+                      s_ind = $('li.li_curr').index();
+                      c_sp.eq(s_ind).addClass("sp_curr").siblings('span').removeClass("sp_curr");
+                  });
+               }
+            setInterval(function(){play();},5000);
+            //介绍班得瑞焦点
+            var cn2_li = $(".w_slider_intr ul li"),cn2_sp = $(".cn2 span"),t=null,ind = 0;
+            cn2_sp.click(function(){
+                t = $(this);ind = t.index();
+                t.addClass("sp_curr").siblings('span').removeClass('sp_curr');
+                cn2_li.eq(ind).addClass("li_active").siblings('li').removeClass('li_active');            });
+        });
+    </script>
+</head>
+<body>
+
+<!-- header-content[ -->
+<header class="w_header">
+    <!-- logo[ -->
+    <div class="w_logo"><a href="#"><img src="images/logo.svg"></a></div><!-- ]logo -->
+    <!-- menu[ -->
+    <div class="w_container">
+        <ul>
+            <li><a href="#">主页</a></li>
+            <li><a href="#">乐团</a></li>
+            <li><a href="#">音乐</a></li>
+            <li><a href="#">商城</a></li>
+            <li><a href="#">发现</a></li>
+            <li><a href="#">讨论</a></li>
+        </ul>
+    </div><!-- ]menu -->
+    <!-- contact[ -->
+    <div class="w_contact">
+        <a href="#"><i class="icon-search"></i></a>
+        <a href="#"><i class="icon-qq"></i></a>
+        <a href="#"><i class="icon-tencent-weibo"></i></a>
+        <a href="#"><i class="icon-weibo"></i></a>
+    </div><!-- ]contact -->
+</header><!-- ]header-content -->
+<!-- header-content[ -->
+<section class="w_cont_top">
+   <div class="w_ct_cont">
+        <h3>聆听自然赐予我们的天籁之音</h3>
+        <span class="sp_line"></span>
+        <p>对不起，我不是什么公主，我也没有豪华的马车，我只是个爱你的乡下姑娘。你还会爱我吗?---灰姑娘</p>
+        <a href="#">VIP会员火热促销</a>
+        <div class="w_music"><i class="icon-pause"></i><span>风居住的地方</span></div>
+        <div class="w_animation"><i></i></div>
+   </div>
+</section>    
+<!-- 焦点[ -->
+<section class="w_about_body">
+     <div class="w_slider_cont">
+         <ul class="slider">
+            <li class="li_curr">
+                <h1>地球上最新鲜的绿色音乐 瑞士一尘不染的音符</h1>
+                <p>
+                    清爽的配乐架构处零压力、零负担的乐曲，更细琢的每一轨声道的解析度，使音场效果更具空灵感，
+                    你将体验到浑圆完美的声线，就连声波最细微的毛边都完整接受……
+                </p>
+            </li>
+            <li>
+                <h1>班得瑞音乐最强特色</h1>
+                <p>
+                   地走访瑞士的罗春湖畔和玫瑰山簏、阿尔卑斯山收藏自然元音；主要强调一种轻柔的绝对性，是最纯净、最能安定人                    心的音乐处方签；独特超广角音场、空灵缥缈的编曲构成最具高临场感的大自然音乐；
+                </p>
+            </li>
+         </ul>
+         <div class="control_nav cn1">
+             <span class="sp_curr"></span>
+             <span></span>
+         </div>
+     </div>
+</section>
+<!-- ]焦点 -->
+<!-- 介绍[ -->
+<section class="w_aboutus_intr">
+    <div class="w_slider_intr">
+        <p class="w_sintr_text">
+            1990年发迹瑞士的班得瑞，来自一群爱好生命的年轻作曲家、演奏家及音源采样工程师等等青年才俊。团长奥利弗史瓦兹是一位多才多艺的音乐人，不但专长多种乐器，更熟稳先进的录音工程。他的特别率先采用先进的数字采样技术，将自然界的声响，运用后期母带24bit数字录制，钜细糜遗地记录下来清晰无比音质。奥利弗史瓦兹更曾与为莎拉布莱曼制作“Timeto Say Good-bye”的天王制作人亚历士克里斯坦森合作，但挚爱新世纪音乐的他，最终选择将一身才华奉献给瑞士山林！
+        </p>
+        <ul>
+            <li class="li_active">
+                <h1>媲美国家地理杂志的专业精神</h1>
+                <p>
+                    有时为了采集自然音效，上山下水、甚至露宿荒野，对班得瑞来说算是家常便饭。比如必须熟知每一种候鸟的季节性与飞行路径，有时为了数分钟的音效，往往在荒野守侯达数月之久！有时必须举着比人身还长的录音架往峡谷中采集风声，整个过程险象环生，但也因为如此，班得瑞才能将这些天然的音效栩栩如生地融合在专辑之中……
+                </p>
+            </li>
+            <li>
+                <h1>更胜Discovery的听觉新感受</h1>
+                <p>
+                   班得瑞成功的将新世纪风格结合大自然音效，扩展了音乐深度，构成现今最具高临场感的大自然音乐！班得瑞的音乐，从头到尾只强调一种轻柔的绝对性，没有艰涩难懂的曲风，没有生硬的个人风格，不只是悦耳好听，同时也是最纯净、最一尘不染的新世纪音乐典范！
+                </p>
+            </li>
+            <li>
+                <h1>大自然的『心灵投手』要你好听</h1>
+                <p>
+                    奥利费史瓦兹展现他独特的编曲手法，以清爽的配器架构出零压力，零负担的乐曲，加上长年的录音室经验，细酌每一轨声道的分辨率，全音场效果更具神秘的空灵感！奥利费史瓦兹说：“班得瑞的音乐是兼具视觉、触觉、与听觉的，我们从大自然中所得到的创作灵感，宛如物线般将一直延伸，飞向到地球另一端，它不只是新世纪音乐，更是淬炼自大自然的心灵投手！”
+                </p>
+            </li>
+            <li>
+                <h1>班得瑞闻名全球的独特之处</h1>
+                <p>
+                  莫过于班得瑞每当执行音乐制作时，从头到尾，深居在阿尔卑斯山林中，坚持不掺杂一丝毫的人工混音，直到母带完成！置身在欧洲山野中，让班得瑞拥有源源不绝的创作灵感，也找寻到自然脱俗的音质。每一声虫声、鸟鸣、花落流水，都是深入山林、湖泊，走访瑞士的阿尔卑斯山，罗春湖畔、玫瑰峰山麓，少女峰等处实地纪录。
+                </p>
+            </li>
+        </ul>
+        <div class="control_nav cn2">
+             <span class="sp_curr"></span>
+             <span></span>
+             <span></span>
+             <span></span>
+        </div>
+    </div>
+</section><!-- ]介绍 -->
+<section class="w_music_list">
+    <h1 class="w_ml_title">品位音符 真实感动</h1>
+    <span class="w_ml_line"></span>
+    <p>采撷大自然的音符滋润心灵，没有年龄限制的音乐极品，永不过时的选择，永远无悔的决定； </p>
+    <p>漫游SPA音乐纪行，由身入心、内外兼修的养生哲学 </p>
+    <ul class="w_ml_nav">
+        <li class="ml_curr">最新发布</li>
+        <li>班得瑞</li>
+        <li>精品推荐</li>
+    </ul>
+    <div class="w_music_item">
+      <ul>
+          <li>
+              <img src="images/1.jpg">
+              <div class="w_mi_desc">
+                  <h3>灰姑娘电影原声 <small>Cinderella</small></h3>
+                  <span>Patrick Doyle</span>
+              </div>
+          </li>
+           <li>
+              <img src="images/2.jpg">
+              <div class="w_mi_desc">
+                  <h3>灰姑娘电影原声 <small>Cinderella</small></h3>
+                  <span>Patrick Doyle</span>
+              </div>
+          </li>
+           <li>
+              <img src="images/3.jpg">
+              <div class="w_mi_desc">
+                  <h3>灰姑娘电影原声 <small>Cinderella</small></h3>
+                  <span>Patrick Doyle</span>
+              </div>
+          </li>
+           <li>
+              <img src="images/4.jpg">
+              <div class="w_mi_desc">
+                  <h3>灰姑娘电影原声 <small>Cinderella</small></h3>
+                  <span>Patrick Doyle</span>
+              </div>
+          </li>
+           <li>
+              <img src="images/5.jpg">
+              <div class="w_mi_desc">
+                  <h3>灰姑娘电影原声 <small>Cinderella</small></h3>
+                  <span>Patrick Doyle</span>
+              </div>
+          </li>
+           <li>
+              <img src="images/6.jpg">
+              <div class="w_mi_desc">
+                  <h3>灰姑娘电影原声 <small>Cinderella</small></h3>
+                  <span>Patrick Doyle</span>
+              </div>
+          </li>
+           <li>
+              <img src="images/6.jpg">
+              <div class="w_mi_desc">
+                  <h3>灰姑娘电影原声 <small>Cinderella</small></h3>
+                  <span>Patrick Doyle</span>
+              </div>
+          </li>
+           <li>
+              <img src="images/5.jpg">
+              <div class="w_mi_desc">
+                  <h3>灰姑娘电影原声 <small>Cinderella</small></h3>
+                  <span>Patrick Doyle</span>
+              </div>
+          </li>
+           <li>
+              <img src="images/4.jpg">
+              <div class="w_mi_desc">
+                  <h3>灰姑娘电影原声 <small>Cinderella</small></h3>
+                  <span>Patrick Doyle</span>
+              </div>
+          </li>
+           <li>
+              <img src="images/3.jpg">
+              <div class="w_mi_desc">
+                  <h3>灰姑娘电影原声 <small>Cinderella</small></h3>
+                  <span>Patrick Doyle</span>
+              </div>
+          </li>
+           <li>
+              <img src="images/2.jpg">
+              <div class="w_mi_desc">
+                  <h3>灰姑娘电影原声 <small>Cinderella</small></h3>
+                  <span>Patrick Doyle</span>
+              </div>
+          </li>
+           <li>
+              <img src="images/1.jpg">
+              <div class="w_mi_desc">
+                  <h3>灰姑娘电影原声 <small>Cinderella</small></h3>
+                  <span>Patrick Doyle</span>
+              </div>
+          </li>
+      </ul>  
+    </div>
+</section>
+</body>
+</html>

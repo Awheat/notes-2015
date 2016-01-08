@@ -1,0 +1,474 @@
+/*
+    header
+*/
+.w_header{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    padding: 36px 0px;
+    z-index: 100;
+}
+/*----滚动条滚动所要用的类----*/
+header.w_header_fix{
+    position: fixed;
+    padding: 18px 0px;
+    background: rgba(32, 178, 170, 0.8);
+    background: #20b2aa\9;
+    background-attachment: fixed;
+    transition:all .5s ease-out 0s;
+}
+header.w_header_fix > .w_logo{
+    width: 140px;
+    top: -5px;
+}
+header.w_header_fix > .w_contact{
+    top: 16px;
+}
+/*----logo----*/
+.w_header .w_logo{
+    position: fixed;
+    width: 200px;
+    height: 65px;
+    top:15px;
+    left: 50px;
+}
+.w_header .w_logo a img{
+    width: 100%;
+    height: 100%;
+    
+}
+/*----menu----*/
+.w_header .w_container{
+    width: 1200px;
+    margin: 0px auto;
+}
+.w_header .w_container ul{
+    width: 100%;
+    text-align: center;
+}
+.w_header .w_container ul li{
+    display: inline;
+    padding: 0px 15px;
+}
+.w_header .w_container ul li a:hover{
+    color:yellow;
+}
+/*----contact----*/
+.w_header .w_contact{
+    position: fixed;
+    right: 50px;
+    top: 33px;
+}
+.w_header .w_contact a{
+    margin-right: 10px;
+}
+.w_header .w_contact a:hover{
+    color: yellow;
+}
+/*
+    w_cont_top
+*/
+.w_cont_top{
+    position: relative;
+    width: 100%;
+    background: url("../images/6.jpg") no-repeat;
+    background-size: 100% 100%;
+    z-index:1;
+   
+}
+.w_cont_top:before{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    content:"";
+    top: 0px;
+    left: 0px;
+    background:url("../images/pf1.png");
+    z-index:2;
+}
+.w_cont_top .w_ct_cont{
+    position: relative;
+    width: 100%;
+    z-index:3;
+}
+.w_cont_top .w_ct_cont > h3{
+    width: 100%;
+    padding-top:20%;
+    text-align: center;
+    color: #dcdcdc;
+    font-size: 18px;
+    font-weight: normal;
+}
+.w_cont_top .w_ct_cont .sp_line{
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #fff;
+    margin: 15px auto 50px auto;
+}
+.w_cont_top .w_ct_cont > p{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #dcdcdc;
+    font-size: 18px;
+}
+.w_cont_top .w_ct_cont > a{
+    display: block;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 40px auto;
+    color: #dcdcdc;
+    font-size:14px;
+    border:1px solid #fff;
+    border-radius: 5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+.w_cont_top .w_ct_cont .w_music{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color:#dcdcdc;
+}
+.w_cont_top .w_ct_cont .w_music > i{
+    margin-right: 5px;
+    cursor: pointer;
+}
+.w_cont_top .w_ct_cont .w_music > span{
+    cursor: pointer;
+}
+.w_cont_top .w_ct_cont .w_music > i:hover,
+.w_cont_top .w_ct_cont .w_music > span:hover{
+    color: #ffffff;
+}
+.w_cont_top .w_ct_cont .w_animation{
+    position: relative;
+    width: 30px;
+    height: 50px;
+    margin:10% auto 0px auto;
+    border-radius:15px;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border:2px solid #fff;
+}
+.w_cont_top .w_ct_cont .w_animation > i{
+    position: absolute;
+    width:5px;
+    height: 8px;
+    top: 2px;
+    left: 13px;
+    background: #fff;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    animation: autoUpDown 1s linear infinite 0s;
+    -moz-animation:autoUpDown 1s linear infinite 0s;
+    -webkit-animation:autoUpDown 1s linear infinite 0s;
+}
+@keyframes autoUpDown{
+    0%{top:5px;opacity: 0;}
+    30%{top: 15px;opacity: 1;}
+    100%{top:30px;opacity: 0;};
+}
+@-moz-keyframes autoUpDown{
+    0%{top:5px;opacity: 0;}
+    30%{top: 15px;opacity: 1;}
+    100%{top:30px;opacity: 0;};
+}
+@-webkit-keyframes autoUpDown{
+    0%{top:5px;opacity: 0;}
+    30%{top: 15px;opacity: 1;}
+    100%{top:30px;opacity: 0;};
+}
+@-o-keyframes autoUpDown{
+    0%{top:5px;opacity: 0;}
+    30%{top: 15px;opacity: 1;}
+    100%{top:30px;opacity: 0;};
+}
+
+/*
+    slider
+*/
+.w_about_body{
+    width: 100%;
+    height:480px;
+    background: url("../images/about_body.jpg");
+}
+.w_slider_cont{
+    width: 1200px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+.slider{
+    display: block;
+    margin: 0px auto;
+}
+.slider:after{
+    display: table;
+    content: "";
+    clear: both;
+}
+.slider li{
+    width:1200px;
+    height:220px;
+    float: left;
+    margin-top: 150px;
+ 
+}
+.slider li h1{
+    text-align: center;
+    color: #333333;
+    font-size:32px;
+    font-weight: 200;
+}
+.slider li p{
+    line-height: 30px;
+    color: #555555;
+    font-size: 18px;
+    padding: 30px 100px;
+    text-align: center;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+.control_nav{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.control_nav span{
+    display: inline-block;
+    width: 12px;
+    height: 13px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 100%;
+    -moz-border-radius:100%;
+    -webkit-border-radius:100%;
+}
+div.cn1 > span{
+    background: #ccc;
+}
+div.cn1 > span.sp_curr{
+    background:#333;
+}
+div.cn2 > span{
+    background: #000;
+}
+div.cn2 > span.sp_curr{
+    background:#f5f06e;
+}
+/*
+    详细介绍
+*/
+.w_aboutus_intr{
+    position: relative;
+    width: 100%;
+    height: 520px;
+    z-index: 1;
+    background: url("../images/bdr_fiugre.jpg") no-repeat;
+}
+.w_aboutus_intr:after{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 520px;
+    content: "";
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    background: url("../images/pf2.png");
+}
+.w_aboutus_intr .w_slider_intr{
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0px auto;
+    z-index: 3;
+}
+.w_aboutus_intr .w_slider_intr .w_sintr_text{
+    color: #ffffff;
+    font-size: 16px;
+    line-height:30px;
+    padding:70px 0px;
+}
+.w_aboutus_intr .w_slider_intr ul{
+    position:relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.w_aboutus_intr .w_slider_intr ul li{
+    position: absolute;
+    width: 100%;
+    height:200px;
+    top: 0px;
+    left: 0px;
+    opacity:0;
+}
+.w_aboutus_intr .w_slider_intr ul li.li_active{
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 3s ease 0s;
+    -webkit-transition:opacity 3s ease 0s;
+}
+.w_aboutus_intr .w_slider_intr ul li h1{
+    color: #f5f06e;
+    font-size:34px;
+    font-weight: 200;
+    padding-bottom: 30px;
+}
+.w_aboutus_intr .w_slider_intr ul li p{
+    color: #fff;
+    line-height: 30px;
+}
+/*
+    专辑列表
+*/
+.w_music_list{
+    width: 100%;
+    height: 1000px;
+}
+.w_music_list .w_ml_title{
+    width: 100%;
+    color: #000;
+    font-size:40px;
+    font-weight: 200;
+    text-align: center;
+    padding-top:60px;
+}
+.w_music_list .w_ml_line{
+    display: block;
+    width: 100px;
+    height:3px;
+    margin:30px auto;
+    background:#7fbbc5;
+}
+.w_music_list > p{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.w_music_list .w_ml_nav{
+    width: 100;
+    text-align: center;
+    padding: 10px 0px 30px 0px;
+}
+.w_music_list .w_ml_nav li{
+    display: inline-block;
+    height: 30px;
+    line-height: 32px;
+    padding:0px 20px;
+    color: #000;
+    cursor: pointer;
+}
+.w_music_list .w_ml_nav li.ml_curr{
+    color: #fff;
+    background: #7fbbc5;
+}
+.w_music_list .w_music_item{
+    width: 100%;
+    padding: 0px 8px;
+    border-sizing:border-box;
+    -moz-border-sizing:border-box;
+    -webkit-border-sizing:border-box;
+}
+.w_music_list div.wmi_active{
+    transition:all 1s ease 0s;
+	-moz-transition:all 1s ease 0s;
+	-webkit-transition:all 1s ease 0s;
+	-o-transition:all 1s ease 0s;
+	animation:bounceIn 1s ease 1.6s backwards;
+	-moz-animation:bounceIn 1s ease 1.6s backwards;
+	-webkit-animation:bounceIn 1s ease 1.6s backwards;
+	-o-animation:bounceIn 1s ease 1.6s backwards;
+}
+@keyframes bounceIn{
+	0%{
+		opacity: 0;
+		transform:scale(0.3);
+	}
+	30%{
+		opacity: 1;
+		transform:scale(1.05);
+	}
+    50%{
+         transform: scale(1)
+    }
+    80%{
+         transform: scale(1.1)
+    }
+	100%{
+		transform:scale(1);
+	}
+}
+@-webkit-keyframes bounceIn{
+	0%{
+		opacity: 0;
+		transform:scale(0.3);
+	}
+	30%{
+		opacity: 1;
+		transform:scale(1.05);
+	}
+    50%{
+         transform: scale(1)
+    }
+    80%{
+         transform: scale(1.1)
+    }
+	100%{
+		transform:scale(1);
+	}
+}
+.w_music_list .w_music_item ul{
+    width: 100%;
+}
+.w_music_list .w_music_item ul li{
+    width: 16%;
+    height:314px;
+    padding: 5px;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+    border-sizing:border-box;
+    -moz-border-sizing:border-box;
+    -webkit-border-sizing:border-box;
+}
+.w_music_list .w_music_item ul li:hover img{
+     margin-top:-50px;
+}
+.w_music_list .w_music_item ul li > img{
+    width: 100%;
+    height: 315px;
+    transition: margin-top .3s linear 0s;
+    -moz-transition:margin-top .3s linear 0s;
+    -webkit-transition:margin-top .3s linear 0s;
+}
+.w_music_list .w_music_item ul li .w_mi_desc{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    cursor: pointer;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    background:#e5fff5;
+}
+.w_music_list .w_music_item ul li .w_mi_desc h3{
+    width: 100%;
+    font-size: 16px;
+    font-weight: normal;
+}
+.w_music_list .w_music_item ul li .w_mi_desc span{
+    color: #666;
+    font-size: 12px;
+}
