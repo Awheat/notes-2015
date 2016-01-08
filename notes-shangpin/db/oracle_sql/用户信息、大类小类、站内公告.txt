@@ -1,0 +1,193 @@
+--插入用户
+insert into yonghu values(SEQ_YONGHU_UCOde.nextval,'zhangsan@163.com','19950201','正式','1-1月-2012','1-2月-2013');
+insert into yonghu values(SEQ_YONGHU_UCOde.nextval,'lisi@163.com','19950301','黄金','2-2月-2012','1-3月-2013');
+insert into yonghu values(SEQ_YONGHU_UCOde.nextval,'wangwu@163.com','19950401','白金','3-3月-2012','1-4月-2013');
+insert into yonghu values(SEQ_YONGHU_UCOde.nextval,'zhaoliu@163.com','19950501','钻石','4-4月-2012','1-5月-2013');
+insert into yonghu values(SEQ_YONGHU_UCOde.nextval,'田七@163.com','19950601','正式','5-5月-2012','1-6月-2013');
+insert into yonghu values(SEQ_YONGHU_UCOde.nextval,'刘安@163.com','19950701','正式','6-6月-2012','1-7月-2013');
+insert into yonghu values(SEQ_YONGHU_UCOde.nextval,'赵顼@163.com','19950801','正式','7-7月-2012','1-8月-2013');
+insert into yonghu values(SEQ_YONGHU_UCOde.nextval,'天元@163.com','19950901','正式','8-8月-2012','1-9月-2013');
+insert into yonghu values(SEQ_YONGHU_UCOde.nextval,'刘徽@163.com','199501001','正式','8-10月-2012','10-2月-2013');
+insert into yonghu values(SEQ_YONGHU_UCOde.nextval,'郑希@163.com','199502111','正式','10-9月-2012','12-2月-2013');
+insert into yonghu values(SEQ_YONGHU_UCOde.nextval,'玉溪@163.com','199502121','正式','11-11月-2012','11-2月-2013');
+insert into yonghu values(SEQ_YONGHU_UCOde.nextval,'中华@163.com','199502131','正式','12-12月-2012','1-2月-2013');
+insert into yonghu values(SEQ_YONGHU_UCOde.nextval,'烟雨@163.com','199502141','正式','13-11月-2012','3-2月-2013');
+commit;
+
+--插入用户信息
+insert into yhxinxi values(SEQ_YHXINXI_mcode.nextval,1,'可用','您母亲的名字','刘郁芳','01234@.com','吴辰','13269834389','男','北京市朝阳区呼家楼208号楼','110010',1,2000);
+insert into yhxinxi values(SEQ_YHXINXI_mcode.nextval,2,'可用','您母亲的生日？','16-5月-1976','012345@.com','李煦','13269834389','男','北京市东城区中关村28号楼','110010',4,500000);
+insert into yhxinxi values(SEQ_YHXINXI_mcode.nextval,3,'可用','您父亲的名字？','李乾','0123@.com','刘忻','13269834389','女','北京市大兴区国贸45号楼','110010',3,28000000);
+insert into yhxinxi values(SEQ_YHXINXI_mcode.nextval,4,'禁用','您父亲的生日？','16-9月-1972','0123456@.com','张杰','13269834389','男','北京市海淀区大望路12号楼','110010',1,4900);
+insert into yhxinxi values(SEQ_YHXINXI_mcode.nextval,5,'可用','您自己的名字？','郝有钱','01234657@.com','何炅','13269834389','男','北京市丰台芍药居12号楼','110010',2,470000);
+insert into yhxinxi values(SEQ_YHXINXI_mcode.nextval,6,'禁用','您自己的生日？','03-23月-2000','012378@.com','汪涵','13269834389','男','北京市顺义区劲松23号楼','110010',3,200000);
+insert into yhxinxi values(SEQ_YHXINXI_mcode.nextval,7,'可用','您初中的班主任名字？','吴建义','01234562@.com','冯小刚','13269834389','男','北京市通州区十里河8号楼','110010',4,5500000);
+insert into yhxinxi values(SEQ_YHXINXI_mcode.nextval,8,'可用','您高中室友的名字？','秦过','012313215@.com','赵本山','13269834389','男','北京市朝阳区双井78号楼','110010',5,2100);
+insert into yhxinxi values(SEQ_YHXINXI_mcode.nextval,9,'可用','您初中的所在地？','湖北科技大学附属中学','0123@.com','成龙','13269834389','男','北京市朝阳区大屯路56号楼','110010',1,22000);
+insert into yhxinxi values(SEQ_YHXINXI_mcode.nextval,10,'可用','您的出生地？','湖北省广水市','0123789745@.com','范冰冰','13269834389','女','北京市朝阳区北苑78号楼','110010',4,2300000);
+insert into yhxinxi values(SEQ_YHXINXI_mcode.nextval,11,'禁用','您有多少存款？','100000000','012312315@.com','张艺谋','13269834389','男','北京市朝阳区时代庄园128号楼','110010',1,23000);
+insert into yhxinxi values(SEQ_YHXINXI_mcode.nextval,12,'可用','您银行卡密码是多少？','770880','012378451@.com','章子怡','13269834389','女','北京市朝阳区牡丹园44楼','110010',5,56000000);
+insert into yhxinxi values(SEQ_YHXINXI_mcode.nextval,13,'可用','您的电话是多少？','11111100000','01231212@.com','陈坤','13269834389','男','北京市朝阳区中南海15号楼','110010',2,200000);
+commit;
+
+--插入收货信息
+
+
+--插入用户尺码
+insert into hychima values(SEQ_HYCHIMA_SCODE.nextval,1,'173','53','45','51','60','13');
+insert into hychima values(SEQ_HYCHIMA_SCODE.nextval,2,'170','54','46','52','61','23');
+insert into hychima values(SEQ_HYCHIMA_SCODE.nextval,3,'177','57','47','53','62','33');
+insert into hychima values(SEQ_HYCHIMA_SCODE.nextval,4,'176','53','48','54','63','43');
+insert into hychima values(SEQ_HYCHIMA_SCODE.nextval,5,'165','52','49','55','64','53');
+insert into hychima values(SEQ_HYCHIMA_SCODE.nextval,6,'181','53','43','56','65','63');
+insert into hychima values(SEQ_HYCHIMA_SCODE.nextval,7,'169','54','42','57','66','73');
+insert into hychima values(SEQ_HYCHIMA_SCODE.nextval,8,'183','59','41','58','67','73');
+insert into hychima values(SEQ_HYCHIMA_SCODE.nextval,9,'174','53','46','59','68','83');
+insert into hychima values(SEQ_HYCHIMA_SCODE.nextval,10,'160','51','50','60','52','43');
+insert into hychima values(SEQ_HYCHIMA_SCODE.nextval,11,'165','53','51','61','62','33');
+insert into hychima values(SEQ_HYCHIMA_SCODE.nextval,12,'190','59','52','62','92','63');
+insert into hychima values(SEQ_HYCHIMA_SCODE.nextval,13,'178','52','53','63','32','83');
+commit;
+--大类
+insert into DFY.cpdl values(SEQ_CPDL_DLCODE.nextval,'服饰','CLOTHING');
+insert into DFY.cpdl values(SEQ_CPDL_DLCODE.nextval,'箱包','BAGS');
+insert into DFY.cpdl values(SEQ_CPDL_DLCODE.nextval,'鞋靴','SHOES');
+insert into DFY.cpdl values(SEQ_CPDL_DLCODE.nextval,'腕表配饰','ACCESSORIES');
+insert into DFY.cpdl values(SEQ_CPDL_DLCODE.nextval,'家居','HOME');
+commit;
+--小类
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'连衣裙','DRESSES',1);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'半身裙','SKIRTS',1);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'POLO衫','POLO',1);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'牛仔裤','JEANS',1);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'T恤','T-SHIRT',1);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'衬衫','SHIRT',1);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'内衣','LINGERIE',1);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'裤装','PANTS',1);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'腰带','BELTS',1);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'丝巾','SCARF',1);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'丝袜','SOCKS',1);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'手提包','HAND BAGS',2);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'肩包','SHOULDER BAGS',2);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'两用包','DUAL USE PACKAGE',2);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'斜挎包','CROSSBODY BAGS',2);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'钱夹','WALLETS',2);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'手拿包','CLUTGH BAGS',2);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'旅行包','TRAVEL BAGS',2);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'小型配件','SMALL LEATHER GOODS',2);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'化妆包','COSMETIC BAGS',2);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'高跟鞋','PUMPS',3);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'芭蕾舞鞋','BALLERINAS',3);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'平底鞋','FLAT SHOES',3);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'运动鞋','SNEAKERS',3);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'正装鞋','DRESS SHOES',3);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'休闲鞋','CASUAL SHOES',3);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'婚鞋','WEDDING SHOES',3);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'靴子','BOOTS',3);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'凉鞋','SANDALS',3);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'项链','NECKLACES',4);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'耳饰','EARRINGS',4);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'戒指','RINGS',4);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'手链手镯','BRACELETS',4);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'腕表','WATCHES',4);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'太阳镜','SUNGLASSES',4);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'腰带','BELTS',4);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'丝巾','SCARF',4);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'头饰','HEADDRESS',4);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'丝袜','SOCKS',4);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'家纺床品','TEXTILE BEDDING',5);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'居家日用','HOME DAILT',5);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'厨具餐具','KITCHEN DINNING',5);
+insert into DFY.cpxl values(SEQ_CPXL_XLCODE.nextval,'时尚家饰','FURNISHINGS',5);
+commit;
+
+--站内公告
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','HAPPY WEEKEND','周末好事成双','images/gonggao/GG4.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','STREET STYLE','出街必备 美到心坎里的清凉装备','images/gonggao/GG2.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','MIU MIU','新品上市','images/gonggao/GG3.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','RUNWAY TO REALWAY','盛夏彩色单鞋','images/gonggao/GG5.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','TIFFANY','情人节献礼','images/gonggao/GG1.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','MIA MIA','潮牌入驻特惠','images/gonggao/20130905103901628227-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','BURBERRY','秋冬新季手袋首发','images/gonggao/20130902174958947634-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','BURBERRY、TOD S、','风格升级 大牌靴','images/gonggao/20130903174701315524-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','EVERYDAY WEAR','小配件提升大人气','images/gonggao/20130905092052674184-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','OK MAGAZINE','《OK! 精彩》杂志特别推荐','images/gonggao/20130902102742876108-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','NEW ARRIVALS','9月大牌仙履新品预售周','images/gonggao/20130910100243107928-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','CHANEL PANDA','典藏级手袋','images/gonggao/20130909151954440730-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','TOP LINGERIE','尚品内衣排行榜','images/gonggao/20130909102549174857-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','MO CO','摩登法式','images/gonggao/20130910103344576682-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','GUCCI/BURBERRY','玩转色彩丝巾','images/gonggao/20130909091940174692-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','WEEKENDER','时髦拉杆箱新品首发','images/gonggao/20130912181603210211-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','PRADA,MIU MIU','秋冬风格新品精选','images/gonggao/20130913091224710892-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','BUY SHOES DAY','周五黑色鞋履派对立减500','images/gonggao/20130912164712632447-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','NEWYORK STYLE','一口价￥1599','images/gonggao/20130912165952960651-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','ROYALCOVER','意式奢华真丝家纺','images/gonggao/20130912090002882889-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','HAPPY WEEKEND','周末好事成双','images/gonggao/20130927165300001114-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','CELEBRITY STYLE','经典戴妃包','images/gonggao/20130927151031782891-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','LAST CHANCE TO','内衣购物节','images/gonggao/20130927161008501416-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','MELLOW YELLOW','周末狂欢特惠美鞋','images/gonggao/20130927173649142109-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','GUCCI/PRADA','出游季必备单品','images/gonggao/20130925203400001964-960-420.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','HAPPY WEEKEND','周末好事成双','images/gonggao/shangpin0.jpg',sysdate,'null','1');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','PRADA','不被时光带走的奢华','images/gonggao/shangpin1.jpg',sysdate,'null','1');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','ALLAIRE','法式优雅','images/gonggao/shangpin2.jpg',sysdate,'null','1');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','GIMTIQUE','殿堂奢华及珠宝','images/gonggao/shangpin4.jpg',sysdate,'null','1');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'head','GIVENCHY/CHLOE','大牌鞋履震撼上新','images/gonggao/shangpin5.jpg',sysdate,'null','1');
+
+
+
+
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/GG14.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/GG15.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/GG16.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/20130905093751299169-300-160.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/20130905102003721892-300-160.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/20130905103350737682-300-160.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/20130909162950128680-300-160.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/20130910151527940342-300-160.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/20130909164224268476-300-160.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/20130926091658970473-300-160.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/20130924104611082016-300-160.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/20130927155407970762-300-160.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/shangpinxg0.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/shangpinxg1.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/shangpinxg2.jpg',sysdate,'null','1');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/shangpinxg6.jpg',sysdate,'null','1');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/shangpinxg7.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/shangpinxg8.jpg',sysdate,'null','1');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'underhead','null','null','images/gonggao/shangpinxg9.jpg',sysdate,'null','0');
+
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'baoleft','null','null','images/gonggao/20130829175614736570-221-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'baoright','null','null','images/gonggao/20130905101825112829-694-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'baoright','null','null','images/gonggao/20130909114253018485-694-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'baoleft','null','null','images/gonggao/20130923094554760085-221-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'baoright','null','null','images/gonggao/20130923093421869422-694-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'baoleft','null','null','images/gonggao/shangpinzuo.jpg',sysdate,'null','1');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'baoright','null','null','images/gonggao/shangpinyou.jpg',sysdate,'null','1');
+
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'yifuleft','null','null','images/gonggao/20130905091632628556-221-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'yifuright','null','null','images/gonggao/20130902095314845038-694-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'yifuleft','null','null','images/gonggao/20130910100650861730-221-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'yifuright','null','null','images/gonggao/20130910100513590647-694-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'yifuleft','null','null','images/gonggao/20130923114655651354-221-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'yifuright','null','null','images/gonggao/20130923114434588397-694-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'yifuleft','null','null','images/gonggao/shangpinzuo1.jpg',sysdate,'null','1');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'yifuright','null','null','images/gonggao/shangpinyou1.jpg',sysdate,'null','1');
+
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'xieleft','null','null','images/gonggao/20130902104540080952-221-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'xieright','null','null','images/gonggao/20130902104407126568-694-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'xieleft','null','null','images/gonggao/20130909123138190990-221-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'xieright','null','null','images/gonggao/20130909191021503950-694-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'xieleft','null','null','images/gonggao/20130925094307767117-221-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'xieright','null','null','images/gonggao/20130923120745354771-694-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'xieleft','null','null','images/gonggao/shangpinzuo2.jpg',sysdate,'null','1');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'xieright','null','null','images/gonggao/shangpinyou2.jpg',sysdate,'null','1');
+
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'peishileft','null','null','images/gonggao/20130902102950189148-221-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'peishiright','null','null','images/gonggao/20130902100417142119-694-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'peishileft','null','null','images/gonggao/20130909102210284674-221-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'peishiright','null','null','images/gonggao/20130909100331315177-694-340.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'peishileft','null','null','images/gonggao/20130923152652385245-221-340.jpg',sysdate,'null','1');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'peishiright','null','null','images/gonggao/20130923115926447837-694-340.jpg',sysdate,'null','1');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'peishileft','null','null','images/gonggao/shangpinzuo3.jpg',sysdate,'null','0');
+insert into DFY.gonggao values(DFY.SEQ_GONGGAO_GGCODE.nextval,'peishiright','null','null','images/gonggao/shangpinyou3.jpg',sysdate,'null','0');
+commit;

@@ -1,0 +1,879 @@
+/* Formatted on 2013/10/13 15:40:03 (QP5 v5.185.11230.41888) */
+--用户
+
+CREATE TABLE DFY.yonghu
+(
+   ucode      INTEGER,                                                  --用户编号
+   uname      VARCHAR2 (50) NOT NULL,                                   --用户姓名
+   upass      VARCHAR2 (50) NOT NULL,                                   --用户密码
+   ujuese     VARCHAR2 (50) NOT NULL,                                   --用户角色
+   zctime     VARCHAR2 (50) NOT NULL,                                   --注册时间
+   lasttime   VARCHAR2 (50) NOT NULL                                  --最后登录时间
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.yonghu ADD (
+  CONSTRAINT yonghu_PK
+ PRIMARY KEY
+ (ucode));
+
+--用户基本信息表
+
+CREATE TABLE DFY.yhxinxi
+(
+   mcode       INTEGER,                                             --用户基本信息编号
+   ucode       INTEGER NOT NULL,                                        --用户编号
+   ustate      VARCHAR2 (50) NOT NULL,                                  --用户状态
+   passtishi   VARCHAR2 (50) NOT NULL,                                --密码找回问题
+   passdaan    VARCHAR2 (50) NOT NULL,                                --密码找回答案
+   email       VARCHAR2 (50) NOT NULL,                                  --电子邮件
+   realname    VARCHAR2 (50) NOT NULL,                                  --真实姓名
+   utel        VARCHAR2 (50) NOT NULL,                                  --用户电话
+   usex        VARCHAR2 (10) NOT NULL,                                  --用户性别
+   uaddr       VARCHAR2 (200) NOT NULL,                               --用户详细地址
+   postcode    VARCHAR2 (50) NOT NULL,                                --用户邮政编码
+   jibie       INTEGER NOT NULL,                                        --用户级别
+   jine        FLOAT (8) NOT NULL                                     --用户消费金额
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.yhxinxi ADD (
+  CONSTRAINT yhxinxi_PK
+ PRIMARY KEY
+ (mcode));
+
+
+
+--用户尺码表
+
+CREATE TABLE DFY.hychima
+(
+   scode       INTEGER,                                               --用户尺码编号
+   ucode       INTEGER NOT NULL,                                        --用户编号
+   height      FLOAT,                                                     --身高
+   weight      FLOAT,                                                     --体重
+   bust        FLOAT,                                                     --胸围
+   waistline   FLOAT,                                                     --腰围
+   hipline     FLOAT,                                                     --臀围
+   shoulder    FLOAT                                                      --肩宽
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.hychima ADD (
+  CONSTRAINT hychima_PK
+  PRIMARY KEY
+  (scode)
+  ENABLE VALIDATE);
+
+
+
+--产品大类表
+
+CREATE TABLE DFY.cpdl
+(
+   dlcode          INTEGER,                                             --大类编号
+   dlname          VARCHAR2 (50) NOT NULL,                              --大类名称
+   dlenglishname   VARCHAR2 (50) NOT NULL                             --大类英文名称
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.cpdl ADD (
+  CONSTRAINT cpdl_PK
+ PRIMARY KEY
+ (dlcode));
+
+--产品小类表
+
+CREATE TABLE DFY.cpxl
+(
+   xlcode          INTEGER,                                             --小类编号
+   xlname          VARCHAR2 (50) NOT NULL,                              --小类名称
+   xlenglishname   VARCHAR2 (50) NOT NULL,                            --小类英文名称
+   dlcode          INTEGER NOT NULL                                   --所属大类编号
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.cpxl ADD (
+  CONSTRAINT cpxl_PK
+ PRIMARY KEY
+ (xlcode));
+
+
+--产品信息表
+
+CREATE TABLE DFY.product
+(
+   pcode           INTEGER,                                             --产品编号
+   pbianma         VARCHAR2 (50) NOT NULL,                              --产品编码
+   pname           VARCHAR2 (50) NOT NULL,                              --商品名称
+   pguishu         VARCHAR2 (50) NOT NULL,                              --商品归属
+   pstate          VARCHAR2 (50) NOT NULL,                              --商品状态
+   pdlcode         INTEGER NOT NULL,                                  --商品所属大类
+   pxlcode         INTEGER NOT NULL,                                  --商品所属小类
+   pstyle          VARCHAR2 (50) NOT NULL,                              --商品类型
+   pyansephoto     VARCHAR2 (200) NOT NULL,                      --商品颜色图片33-33
+   ptrolleyphoto   VARCHAR2 (200) NOT NULL,                     --商品购物车图片70-90
+   pjiesuanphoto   VARCHAR2 (200) NOT NULL,                     --商品结算图片90-120
+   pphoto          VARCHAR2 (200) NOT NULL,                      --商品图片210-280
+   plitphoto       VARCHAR2 (2000) NOT NULL,                       --商品小图60-80
+   pmedphoto       VARCHAR2 (2000) NOT NULL,                     --商品中图383-510
+   pbigphoto       VARCHAR2 (2000) NOT NULL,                   --商品大图1080-1440
+   pcolor          VARCHAR2 (50) NOT NULL,                              --商品颜色
+   pscprice        FLOAT (8) NOT NULL,                                --商品市场价格
+   pspprice        FLOAT (8) NOT NULL,                                --商品尚品价格
+   pzhekou         FLOAT (8) NOT NULL,                                  --折扣价格
+   psum            VARCHAR2 (50) NOT NULL,                              --商品库存
+   psales          INTEGER NOT NULL,                                    --商品销量
+   pjieshao        VARCHAR2 (2000) NOT NULL,                            --商品介绍
+   ptuijian        VARCHAR2 (50) NOT NULL,                              --商品推荐
+   starttime       VARCHAR2 (50) NOT NULL,                              --起售时间
+   endtime         VARCHAR2 (50) NOT NULL                               --止售时间
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.product ADD (
+  CONSTRAINT product_PK
+ PRIMARY KEY
+ (pcode));
+
+
+
+--商品独有信息
+
+CREATE TABLE DFY.cpduyouxinxi
+(
+   dycode       INTEGER,                                              --独有信息编号
+   pcode        INTEGER,                                                --商品编号
+   jibenxinxi   VARCHAR2 (50),                                          --基本信息
+   spzhishu     VARCHAR2 (50),                                          --商品指数
+   sizes        VARCHAR2 (50)                                           --商品号码
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.cpduyouxinxi ADD (
+  CONSTRAINT cpduyouxinxi_PK
+  PRIMARY KEY
+  (dycode)
+  ENABLE VALIDATE);
+
+
+
+--品牌管理表
+
+CREATE TABLE DFY.ppgl
+(
+   ppcode     INTEGER,                                                  --品牌编号
+   ppname     VARCHAR2 (200) NOT NULL,                                  --品牌名称
+   pplogo     VARCHAR2 (200) NOT NULL,                                --品牌logo
+   ppphoto    VARCHAR2 (2000) NOT NULL,                                 --品牌图片
+   ppdalei    VARCHAR2 (50) NOT NULL,                                 --品牌经营大类
+   ppchandi   VARCHAR2 (50) NOT NULL,                                   --品牌产地
+   ppstart    VARCHAR2 (50) NOT NULL,                                  --品牌创始人
+   pptime     VARCHAR2 (50) NOT NULL,                                 --品牌创建时间
+   ppjj       VARCHAR2 (50) NOT NULL,                                   --品牌简介
+   ppjs       VARCHAR2 (4000) NOT NULL                                  --品牌介绍
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.ppgl ADD (
+  CONSTRAINT ppgl_PK
+ PRIMARY KEY
+ (ppcode));
+
+--支付方式表
+
+CREATE TABLE DFY.zhifu
+(
+   zcode    INTEGER,                                                  --支付方式编号
+   zname    VARCHAR2 (50) NOT NULL,                                   --支付方式名称
+   zphoto   VARCHAR2 (200) NOT NULL,
+   zstate   VARCHAR2 (50) NOT NULL                                    --支付方式状态
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.zhifu ADD (
+  CONSTRAINT zhifu_PK
+ PRIMARY KEY
+ (zcode));
+
+--送货方式表
+
+CREATE TABLE DFY.songhuo
+(
+   scode      INTEGER,                                                --送货方式编号
+   sname      VARCHAR2 (50),                                          --送货方式名称
+   jiage      FLOAT,                                                      --价格
+   shuoming   VARCHAR2 (500),                                         --送货方式说明
+   beizhu     VARCHAR2 (500),                                             --备注
+   state      NVARCHAR2 (50)                                          --送货方式状态
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.songhuo ADD (
+  CONSTRAINT songhuo_PK
+  PRIMARY KEY
+  (scode)
+  ENABLE VALIDATE);
+
+
+--订单详情表
+
+CREATE TABLE DFY.orderproduct
+(
+   orpcode    INTEGER,                                                --订单详情编号
+   ocode      INTEGER NOT NULL,                                         --订单编号
+   pcode      INTEGER NOT NULL,                                         --商品编号
+   psun       FLOAT NOT NULL,                                           --商品数量
+   pzongjia   FLOAT NOT NULL                                              --总价
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.orderproduct ADD (
+  CONSTRAINT orderproduct_PK
+ PRIMARY KEY
+ (orpcode));
+
+
+
+--订单表
+
+CREATE TABLE DFY.porder
+(
+   ocode     INTEGER,                                                   --订单编号
+   ucode     INTEGER NOT NULL,                                          --用户编号
+   oprice    FLOAT NOT NULL,                                            --订单价格
+   hyprice   FLOAT NOT NULL,                                            --会员价格
+   otime     VARCHAR2 (50) NOT NULL,                                  --订单生成时间
+   scode     INTEGER NOT NULL,                                        --送货方式编号
+   stime     VARCHAR2 (50),                                             --送货时间
+   zcode     INTEGER,                                                 --支付方式编号
+   ostate    VARCHAR2 (50) NOT NULL,                                    --订单流程
+   odeal     VARCHAR2 (50),                                             --订单流程
+   odeal1    VARCHAR2 (50),                                            --订单流程1
+   time1     VARCHAR2 (50),                                          --订单流程1时间
+   odeal2    VARCHAR2 (50),                                            --订单流程2
+   time2     VARCHAR2 (50),                                          --订单流程2时间
+   odeal3    VARCHAR2 (50),                                            --订单流程3
+   time3     VARCHAR2 (50),                                          --订单流程3时间
+   odeal4    VARCHAR2 (50),                                            --订单流程4
+   time4     VARCHAR2 (50)                                           --订单流程4时间
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.porder ADD (
+  CONSTRAINT order_PK
+ PRIMARY KEY
+ (ocode));
+
+
+--品牌公告表
+
+CREATE TABLE DFY.ppgg
+(
+   ppggcode      INTEGER,                                             --品牌公告编号
+   ppcode        INTEGER,                                               --品牌编号
+   ppggtitle     VARCHAR2 (200),                                      --品牌公告标题
+   ppggcontent   VARCHAR2 (2000),                                     --品牌公告内容
+   ppggphoto     VARCHAR2 (200),                                      --品牌公告图片
+   ppggtime      VARCHAR2 (50),                                     --品牌公告发布时间
+   ppggstate     VARCHAR2 (10)                                        --品牌公告状态
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.ppgg ADD (
+  CONSTRAINT ppgg_PK
+  PRIMARY KEY
+  (ppggcode)
+  ENABLE VALIDATE);
+
+
+--收货人信息表
+
+CREATE TABLE DFY.shrmess
+(
+   shrcode   INTEGER,                                                --收货人信息编号
+   ucode     INTEGER,                                                   --用户编号
+   shrname   VARCHAR2 (50),                                            --收货人姓名
+   addr      VARCHAR2 (200),                                           --收货人地址
+   youbian   VARCHAR2 (50),                                            --收货人邮编
+   tel       VARCHAR2 (50),                                            --收货人电话
+   moren     VARCHAR2 (50)                                            --默认收货信息
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.shrmess ADD (
+  CONSTRAINT shrmess_PK
+  PRIMARY KEY
+  (shrcode)
+  ENABLE VALIDATE);
+
+-- 收藏商品/品牌表
+
+CREATE TABLE DFY.pcollect
+(
+   ccode    INTEGER,                                                  --收藏信息编号
+   ucode    INTEGER,                                                    --用户编号
+   pcode    INTEGER,                                                    --商品编号
+   ctime    VARCHAR2 (50)                                               --收藏时间
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.pcollect ADD (
+  CONSTRAINT pcollect_PK
+  PRIMARY KEY
+  (ccode)
+  ENABLE VALIDATE);
+
+
+--站内公告表
+
+CREATE TABLE DFY.gonggao
+(
+   ggcode      INTEGER,                                                 --公告编号
+   ggweizhi    VARCHAR2 (50),                                           --公告位置
+   ggtitle     VARCHAR2 (50),                                           --公告标题
+   ggcontent   VARCHAR2 (2000),                                         --公告内容
+   ggphoto     VARCHAR2 (200),                                          --公告图片
+   fabutime    VARCHAR2 (200),                                        --公告发布时间
+   beizhu      VARCHAR2 (200),                                            --备注
+   ggstate     VARCHAR2 (10)                                            --公告状态
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.gonggao ADD (
+  CONSTRAINT gonggao_PK
+  PRIMARY KEY
+  (ggcode)
+  ENABLE VALIDATE);
+
+--购物车
+
+CREATE TABLE DFY.trolley
+(
+   ucode    INTEGER,                                                    --用户编号
+   pcode    INTEGER,                                                    --商品编号
+   pcount   INTEGER                                                     --商品数量
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.trolley ADD (
+  CONSTRAINT trolley_ucode_PK
+  FOREIGN KEY(ucode)
+  REFERENCES DFY.yonghu(ucode)
+  ENABLE VALIDATE);
+
+
+--体验报告表
+
+CREATE TABLE DFY.baogao
+(
+   bcode      INTEGER,                                                  --报告编号
+   ucode      INTEGER NOT NULL,                                         --用户编号
+   pcode      INTEGER NOT NULL,                                         --商品编号
+   bcontent   VARCHAR2 (200)                                            --报告内容
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.baogao ADD (
+  CONSTRAINT baogao_PK
+  PRIMARY KEY
+  (bcode)
+  ENABLE VALIDATE);
+
+
+--订阅邮件表
+
+CREATE TABLE DFY.email
+(
+   ucode    INTEGER NOT NULL,                                           --用户编号
+   email1   VARCHAR2 (50),                                           --邮件一订阅状态
+   email2   VARCHAR2 (50),                                           --邮件二订阅状态
+   email3   VARCHAR2 (50),                                           --邮件三订阅状态
+   email4   VARCHAR2 (50),                                           --邮件四订阅状态
+   email5   VARCHAR2 (50)                                            --邮件五订阅状态
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.email ADD (
+  CONSTRAINT email_ucode_PK
+  FOREIGN KEY(ucode)
+  REFERENCES DFY.yonghu(ucode)
+  ENABLE VALIDATE);
+
+--站内通知表
+
+CREATE TABLE DFY.MESSAGE
+(
+   ucode         INTEGER NOT NULL,                                      --用户编号
+   mcode         INTEGER,                                               --通知编号
+   messtitle     NVARCHAR2 (50) NOT NULL,                               --通知标题
+   messcontent   NVARCHAR2 (2000) NOT NULL,                             --通知内容
+   mtime         NVARCHAR2 (50) NOT NULL,                               --通知时间
+   states        NVARCHAR2 (50) NOT NULL                                --阅读状态
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.MESSAGE ADD (
+  CONSTRAINT message_PK
+  PRIMARY KEY
+  (mcode)
+  ENABLE VALIDATE);
+
+
+--后台管理员表
+
+CREATE TABLE DFY.admins
+(
+   acode            INTEGER,                                           --管理员编号
+   aname            VARCHAR2 (50) NOT NULL,                           --管理员登录名
+   apass            VARCHAR2 (50) NOT NULL,                            --管理员密码
+   permissioncode   INTEGER NOT NULL,                                  --管理员权限
+   zctime           VARCHAR2 (50) NOT NULL,                             --发放时间
+   lasttime         VARCHAR2 (50) NOT NULL                            --最后登录时间
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.admins ADD (
+  CONSTRAINT admin_PK
+  PRIMARY KEY
+  (acode)
+  ENABLE VALIDATE);
+
+
+--管理员权限表
+
+CREATE TABLE DFY.permission
+(
+   permissioncode    INTEGER,                                           --权限编号
+   permissionlabel   NVARCHAR2 (50) NOT NULL,                           --权限等级
+   granter           NVARCHAR2 (50) NOT NULL,                           --发放权限
+   addUser           NVARCHAR2 (50) NOT NULL,
+   delUser           NVARCHAR2 (50) NOT NULL,
+   upUser            NVARCHAR2 (50) NOT NULL,
+   selUser           NVARCHAR2 (50) NOT NULL,
+   addpp             NVARCHAR2 (50) NOT NULL,
+   delpp             NVARCHAR2 (50) NOT NULL,
+   uppp              NVARCHAR2 (50) NOT NULL,
+   selpp             NVARCHAR2 (50) NOT NULL,
+   addp              NVARCHAR2 (50) NOT NULL,
+   delp              NVARCHAR2 (50) NOT NULL,
+   upp               NVARCHAR2 (50) NOT NULL,
+   selp              NVARCHAR2 (50) NOT NULL,
+   addgg             NVARCHAR2 (50) NOT NULL,
+   delgg             NVARCHAR2 (50) NOT NULL,
+   upgg              NVARCHAR2 (50) NOT NULL,
+   selgg             NVARCHAR2 (50) NOT NULL,
+   addppgg           NVARCHAR2 (50) NOT NULL,
+   delppgg           NVARCHAR2 (50) NOT NULL,
+   upppgg            NVARCHAR2 (50) NOT NULL,
+   selppgg           NVARCHAR2 (50) NOT NULL
+)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.permission ADD (
+  CONSTRAINT permission_PK
+  PRIMARY KEY
+  (permissioncode)
+  ENABLE VALIDATE);
+
+--省份表
+
+CREATE TABLE DFY.province
+(
+   id             INTEGER,
+   provinceid     INTEGER,
+   provincename   VARCHAR2 (50)
+)
+STORAGE (BUFFER_POOL DEFAULT)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.province ADD (
+  CONSTRAINT province_PK
+  PRIMARY KEY
+  (id)
+  ENABLE VALIDATE);
+
+--城市表
+
+CREATE TABLE DFY.city
+(
+   id         INTEGER,
+   cityid     INTEGER,
+   cityname   VARCHAR2 (50),
+   fatherid   INTEGER
+)
+STORAGE (BUFFER_POOL DEFAULT)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.city ADD (
+  CONSTRAINT city_PK
+  PRIMARY KEY
+  (id)
+  ENABLE VALIDATE);
+
+--地区表
+
+CREATE TABLE DFY.area
+(
+   id         INTEGER,
+   areaid     INTEGER,
+   areaname   VARCHAR2 (50),
+   fatherid   INTEGER
+)
+STORAGE (BUFFER_POOL DEFAULT)
+LOGGING
+NOCOMPRESS
+NOCACHE
+NOPARALLEL
+NOMONITORING;
+
+ALTER TABLE DFY.area ADD (
+  CONSTRAINT area_PK
+  PRIMARY KEY
+  (id)
+  ENABLE VALIDATE);
+
+
+--自增列
+
+CREATE SEQUENCE DFY.SEQ_ADMINS_ACODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_BAOGAO_BCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_CPDL_DLCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_CPDUYOUXINXI_DYCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_CPXL_XLCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_GONGGAO_GGCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_HYCHIMA_SCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_MESSAGE_MCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_QRDERPRODUCT_ORPCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_PCOLLECT_CCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_PERMISSION_PERMISSIONCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_PORDER_OCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_PPGG_PPGGCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_PPGL_PPCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_PRODUCT_PCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_SHRMESS_SHRCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_SONGHUO_SCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_YHXINXI_MCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_YONGHU_UCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+CREATE SEQUENCE DFY.SEQ_ZHIFU_ZCODE
+   START WITH 1
+   INCREMENT BY 1
+   MINVALUE 1
+   NOCACHE
+   NOCYCLE
+   NOORDER;
+
+--外键关系
+ALTER TABLE DFY.yhxinxi ADD (
+ CONSTRAINT yhxinxi_FK
+ FOREIGN KEY(ucode)
+ REFERENCES DFY.yonghu(ucode));
+   ALTER TABLE DFY.hychima ADD (
+  CONSTRAINT hychima_FK
+  FOREIGN KEY
+  (ucode)
+  REFERENCES DFY.yonghu(ucode)
+  ENABLE VALIDATE);
+ALTER TABLE DFY.cpxl ADD (
+  CONSTRAINT cpxl_FK
+ FOREIGN KEY(dlcode)
+ REFERENCES DFY.cpdl(dlcode));
+ALTER TABLE DFY.product ADD (
+  CONSTRAINT product_pdlcode_FK
+ FOREIGN KEY(pdlcode)
+ REFERENCES DFY.cpdl(dlcode));
+ALTER TABLE DFY.product ADD (
+  CONSTRAINT product_pxlcode_FK
+ FOREIGN KEY(pxlcode)
+ REFERENCES DFY.cpxl(xlcode));
+ALTER TABLE DFY.cpduyouxinxi ADD (
+  CONSTRAINT cpduyouxinxi_FK
+ FOREIGN KEY(pcode)
+ REFERENCES DFY.product(pcode));
+ALTER TABLE DFY.orderproduct ADD (
+  CONSTRAINT orderproduct_ocode_FK
+ FOREIGN KEY(ocode)
+ REFERENCES dfy.porder(ocode));
+ ALTER TABLE DFY.orderproduct ADD (
+  CONSTRAINT orderproduct_pcode_FK
+ FOREIGN KEY(pcode)
+ REFERENCES DFY.product(pcode));
+ALTER TABLE DFY.porder ADD (
+  CONSTRAINT order_FK
+ FOREIGN KEY(ucode)
+ REFERENCES DFY.yonghu(ucode));
+ALTER TABLE DFY.ppgg ADD (
+  CONSTRAINT ppgg_FK
+  FOREIGN KEY(ppcode)
+  REFERENCES DFY.ppgl(ppcode)
+  ENABLE VALIDATE);
+ALTER TABLE DFY.shrmess ADD (
+  CONSTRAINT shrmess_FK
+  FOREIGN KEY(ucode)
+  REFERENCES DFY.yonghu(ucode)
+  ENABLE VALIDATE);
+ALTER TABLE DFY.pcollect ADD (
+  CONSTRAINT pcollect_pcode_FK
+  FOREIGN KEY(pcode)
+  REFERENCES DFY.product(pcode)
+  ENABLE VALIDATE);
+
+ALTER TABLE DFY.pcollect ADD (
+  CONSTRAINT pcollect_ucode_FK
+  FOREIGN KEY(ucode)
+  REFERENCES DFY.yonghu(ucode)
+  ENABLE VALIDATE);
+ALTER TABLE DFY.trolley ADD (
+  CONSTRAINT trolley_pcode_FK
+  FOREIGN KEY(pcode)
+  REFERENCES DFY.product(pcode)
+  ENABLE VALIDATE);
+ALTER TABLE DFY.baogao ADD (
+  CONSTRAINT baogao_ucode_FK
+  FOREIGN KEY(ucode)
+  REFERENCES DFY.yonghu(ucode)
+  ENABLE VALIDATE);
+ALTER TABLE DFY.baogao ADD (
+  CONSTRAINT baogao_pcode_FK
+  FOREIGN KEY(pcode)
+  REFERENCES DFY.product(pcode)
+  ENABLE VALIDATE);
+ALTER TABLE DFY.MESSAGE ADD (
+  CONSTRAINT MESSAGE_ucode_FK
+  FOREIGN KEY(ucode)
+  REFERENCES DFY.yonghu(ucode)
+  ENABLE VALIDATE);
+ALTER TABLE DFY.admins ADD (
+  CONSTRAINT admin_FK
+  FOREIGN KEY(permissioncode)
+  REFERENCES DFY.permission(permissioncode)
+  ENABLE VALIDATE);

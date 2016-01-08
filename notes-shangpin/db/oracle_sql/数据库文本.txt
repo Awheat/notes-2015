@@ -1,0 +1,212 @@
+个人用户用户表（yonghu）
+字段	类型（长度）	是否标识	是否为空	主/外键	描述
+ucode	Int	  	是		否		主	用户编号
+uname	Varchar(50)	唯一验证				登陆名称
+upass	Varchar(50)	6-12位					登陆密码
+ujuese	Varchar(50)	普通用户				用户角色
+zctime	Varchar(50)	系统时间				注册时间
+lasttime	Varchar(50)					最后登录时间
+
+用户信息表（yhxinxi）
+字段	类型（长度）	是否标识	是否为空	主/外键	描述
+mcode	Int		是		否		主	用户信息编号
+ucode	int				1			用户编号
+ustate	Varchar(50)	可用/禁用	2			用户状态
+passtishi	Varchar(50)		3			用户密码提示
+passdaan	Varchar(50)		4			密码提示答案
+email	Varchar(50)			5			用户邮箱
+realname	Varchar(50)		6			真实姓名
+uid	Varchar(50)			7			省份证号
+utel	Varchar(50)			8			用户电话
+usex	Varchar(10)			9			用户性别
+uzhiye  Varchar(50)						用户职业
+ushouru Varchar(50)						用户收入
+uaddr	Varchar(2000)			10			收货地址
+postcode	Varchar(50)		11			邮编号码
+jibie	int				12			会员级别
+
+用户尺码表 （yhchima）
+字段	类型（长度）	是否标识	是否为空	主/外键	描述
+scode   Int		是		否		主	用户信息编号
+ucode	int				1			用户编号
+height      	float						身高
+weight		float						体重
+bust		float						胸围
+waistline	float						腰围
+hipline		float						臀围
+shoulder	float	 					肩宽
+
+产品大类表（cpdl）
+字段	类型（长度）	是否标识	是否为空	主/外键	描述
+dlcode	Int		是		否		主	大类编号
+dlname	Varchar(50)						大类名称
+dlenglishname	Varchar(50)						大类英文名称
+ 
+
+产品小类表（cpxl）
+字段	类型（长度）	是否标识	是否为空	主/外键	描述
+xlcode	Int		是		否		主	小类编号
+xlname	Varchar(50)						小类名称
+dlcode	Varchar(50)						所属大类
+
+//小类信息表（xlxinxi）
+//字段	类型（长度）	是否标识	是否为空	主/外键	描述/
+//xlcode	Int	是	否		小类编号
+//jibenxinxi  Varchar(50) 否		基本信息
+//shangpinzhishu    Varchar(50)  否       商品指数
+
+产品独有信息表（cpduyouxinxi）
+字段	类型（长度）	是否标识	是否为空	主/外键	描述/
+dycode  Int		是		否		主	信息编号
+pcode   Int		是		否			产品编号
+jibenxinxi  	  Varchar(50) 		否			基本信息
+shangpinzhishu    Varchar(50)  		否       		商品指数
+size	Varchar(50)						商品尺码
+ 
+
+产品信息表（product）
+字段	类型（长度）	是否标识	是否为空	主/外键	描述
+pcode	Int		是		否		主	产品编号
+pname	Varchar(50)			2  		-1	产品名称
+pguishu	int				3			产品归属品牌
+pstate	Varchar(50)	通过/禁用	4			产品状态
+pdlcode	Varchar(50)			5			产品所属大类
+pxlcode	Varchar(50)			6			产品所属小类
+pfbtime	Varchar(50)			7			产品发布时间
+pstyle	Varchar(50)			8			产品类型
+pphoto	Varchar(200)	照片名称	9			产品照片
+pbigphoto	Varchar(200)	删	10			产品大图
+plittlephoto	Varchar(200)	删	10			产品小图
+pcolor		Varchar(50)					产品颜色  
+pscprice	float			11			市场价格
+phyprice	Folat			12			会员价格
+pzhekou		folat						产品折扣
+psum	Varchar(50)			13			产品数量
+putil	Varchar(10)			14			产品单位
+pjieshao	text			15			产品介绍
+starttime	Varchar(50)		16			始售时间
+endtime	Varchar(50)			17			止售时间
+产品类型：最新产品，特价产品，推荐产品
+
+品牌管理（ppgl）
+字段	类型（长度）	是否标识	是否为空	主/外键	描述
+ppcode	Int		是		否		主	品牌编号
+ppname	Varchar(100)	唯一		1			品牌名称
+pplogo	Varchar(200)	默认未设计图片				品牌logo
+ppphoto	Varchar(200)	默认未设计图片				品牌商标
+ppjyfw	Varchar(200)	文本框输入				经营范围
+ppdlstyle	Varchar(50)	下拉列表			经营大类
+ppfuzeren	Varchar(50)					品牌负责人
+fzrtel	Varchar(50)						负责人联系方式
+caddr	Varchar(200)						公司地址
+youbian	Varchar(50)						公司邮编
+tel	Varchar(50)						公司电话
+chuanzhen	Varchar(50)					公司传真
+qq	Varchar(50)						客服qq号码
+email	Varchar(50)						电子邮箱
+ppstate	Varchar(10)	可用/停用				品牌状态
+pptime	Varchar(50)						品牌注册时间
+lasttime	Varchar(50)					最后使用时间
+ppsjjs	text							品牌商家介绍
+sjrenzheng	Int	默认为1					商家认证
+
+
+送货方式表（songhuo）
+字段	类型（长度）	是否标识	是否为空	主/外键	描述
+scode	Int		是		否		主	送货方式编号
+sname	Varchar(50)			2			方式名称
+jiage	float				3			送货价格
+shuoming	Varchar(500)		4			该方式的说明
+beizhu	Varchar(500)			5			方式备注
+state	Varchar(50)	开通/关闭	6			送货状态
+
+
+支付方式表（zhifu）
+字段	类型（长度）	是否标识	是否为空	主/外键	描述
+zcode	Int		是		否		主	支付方式编号
+zname	Varchar(50)						方式名称
+zstate	Varchar(50)	开通/关闭				开通状态
+
+品牌公告表（ppgg）：   
+字段	类型（长度）	是否标识	是否为空	主/外键	描述
+ppggcode	Int	是		否		主	品牌公告编号
+ppcode	int				1			品牌编号
+ppggtitle	Varchar(200)		2			公告标题
+ppggcontent	text			3			公告内容
+ppphoto	Varchar(200)	照片名称	9			产品照片
+ppggtime	Varchar(50)		4			公告发布时间
+ppggstate	Varchar(10)	可用/禁用		5	公告状态
+
+
+用户一次购买的商品表（orderproduct）
+字段	类型（长度）	是否标识	是否为空	主/外键	描述
+opcode	int		是		否		主	订单商品编号
+ocode	Varchar(50)						订单编号
+pcode	int							商品编号
+psum	float							商品数量
+pzongjia	float						该商品价格
+pjifen	int							商品积分
+
+用户订单表（porder）   
+字段	类型（长度）	是否标识	是否为空	主/外键	描述
+ocode	Varchar(50)	是		否		主	订单编号
+ucode	int				2			用户编号
+oprice	Folat				3			订单价格
+hyprice	float				4			会员价格
+otime	Varchar(50)			5			订单生成时间
+shouhuo	Varchar(50)			6			收货方式
+fukuan	Varchar(50)			7			付款方式
+jifen	int				8			此次订单积分
+ostate	Varchar(50)	生效/作废	9			订单状态
+odeal	Varchar(50)	未作任何处理	10			订单流程
+odeal1	Varchar(50)	用户已划出款	11			订单流程
+time1	Varchar(50)			12			已划出款时间
+odeal2	Varchar(50）	服务商已收款	13			订单流程
+time2	Varchar(50)			14			服务商收款时间
+odeal3	Varchar(50)	服务商已发货	15			订单流程
+time3	Varchar(50)			16			发货时间
+odeal4	Varchar(50)	用户已收到货	17			订单流程
+time4	Varchar(50)			18			收货时间
+
+收货人信息表（shrmess）
+字段	类型（长度）	是否标识	是否为空	主/外键	描述
+shrcode	Int		是		否		主	收货人信息编号
+ocode	Varchar(50)			1			订单编号
+ucode	int				2			用户编号
+name	Varchra(50)			3			收货人姓名            
+sex	Varchar(10)			4			收货人性别
+addr	Varchar(100)			5			详细地址
+youbian	Varchar(50)			6			邮编
+tel	Varchar(50)			7			电话
+email	Varchar(50)			8			电子邮件
+shfs	Varchar(50)			9			送货方式
+zffs	Varchar(50)			10			支付方式
+liuyan	Varchar(500)			11			简单留言
+
+用户商品收藏表（pcollect）
+字段	类型（长度）	是否标识	是否为空	主/外键	描述
+ccode	Int		是		否		主	收藏编号
+ucode	int							用户编号
+pcode	int							商品编号
+ctime	Varchar(50)						收藏时间
+	
+站内公告表（gonggao）
+字段	类型（长度）	是否标识	是否为空	主/外键	描述
+ggcode	Int		是		否		主	公告编号
+ggtitle	Varchar(200)						公告标题
+ggcontent	text						公告内容
+ggphoto Varchar(200)	照片名称				公告照片
+fabutime	Varchar(50)					发布时间
+beizhu	Varchar(200)						备注
+
+体验报告表（）
+
+邮件订阅表（）
+
+站内通知表（）
+
+购物车表（）
+字段	类型（长度）	是否标识	是否为空	主/外键	描述
+ucode	Int		是		否			用户编号
+pcode	Int		是		否			产品编号
+pcount  int     						产品数量

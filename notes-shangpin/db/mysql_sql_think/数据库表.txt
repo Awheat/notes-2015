@@ -1,0 +1,433 @@
+
+/*
+	SET FOREIGN_KEY_CHECKS=0;取消外键约束
+*/
+
+/*
+	1.用户表
+*/
+DROP TABLE IF EXISTS `wwc_yonghu`;
+CREATE TABLE `wwc_yonghu` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `uname` varchar(32) NOT NULL,
+  `upass` varchar(64) NOT NULL,
+  `ujuese` varchar(64) NOT NULL,
+  `zctime` varchar(64) NOT NULL,
+  `lasttime` varchar(64) NOT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+/*
+	2.用户信息表
+*/
+DROP TABLE IF EXISTS `wwc_yhxinxi`;
+CREATE TABLE `wwc_yhxinxi` (
+  `mid` int(11) NOT NULL AUTO_INCREMENT,					
+  `uid` int(11) NOT NULL,
+  `ustate` varchar(50) NOT NULL,
+  `passtishi` varchar(50) NOT NULL,
+  `passdaan` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `realname` varchar(50) NOT NULL,
+  `utel` varchar(50) NOT NULL,
+  `usex` varchar(50) NOT NULL,
+  `uaddr` varchar(64) NOT NULL,
+  `postcode` varchar(64) NOT NULL,
+  `jibie` int(11) NOT NULL,
+  `jine` int(11) NOT NULL,
+  PRIMARY KEY (`mid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+
+/*
+	3.用户尺码表
+*/
+DROP TABLE IF EXISTS `wwc_yhchima`;
+CREATE TABLE `wwc_yhchima` (
+  `sid` int(11) NOT NULL AUTO_INCREMENT,					
+  `uid` int(11) NOT NULL,
+  `height` int(11) NOT NULL,
+  `weight` int(11) NOT NULL,
+  `bust` int(11) NOT NULL,
+  `waistline` int(11) NOT NULL,
+  `hipline` int(11) NOT NULL,
+  `shoulder` int(11) NOT NULL,
+  PRIMARY KEY (`sid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+/*
+	4.商品大类表
+*/
+DROP TABLE IF EXISTS `wwc_cpdl`;
+CREATE TABLE `wwc_cpdl` (
+  `dlid` int(11) NOT NULL AUTO_INCREMENT,					
+  `dlname` varchar(64) NOT NULL,
+  PRIMARY KEY (`dlid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+/*
+	5.商品小类表
+*/
+DROP TABLE IF EXISTS `wwc_cpxl`;
+CREATE TABLE `wwc_cpxl` (
+  `xlid` int(11) NOT NULL AUTO_INCREMENT,					
+  `xlname` varchar(64) NOT NULL,
+  `xlsex` int(11) NULL,
+  `dlid` int(11) NOT NULL,
+  PRIMARY KEY (`xlid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+/*
+	4.1热门推荐
+*/
+DROP TABLE IF EXISTS `wwc_rmtj`;
+CREATE TABLE `wwc_rmtj` (
+  `rmid` int(11) NOT NULL AUTO_INCREMENT,					
+  `rmname` varchar(64) NOT NULL,
+  `dlid` varchar(64) NOT NULL,
+  PRIMARY KEY (`rmid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+
+/*
+	6.商品详细信息表
+*/
+DROP TABLE IF EXISTS `wwc_spinfo`;
+CREATE TABLE `wwc_spinfo` (
+  `pid` int(11) NOT NULL AUTO_INCREMENT,					
+  `pbianma` varchar(64) NOT NULL,
+  `pname` varchar(64) NOT NULL,
+  `pguishu` varchar(64) NOT NULL,
+  `pstate` varchar(64) NOT NULL,
+  `pdlcode` int(11) NOT NULL,
+  `pxlcode` int(11) NOT NULL,
+  `pstyle` varchar(64) NOT NULL,
+  `pyansephoto` varchar(200) NOT NULL,
+  `ptrolleyphoto` varchar(200) NOT NULL,
+  `pjiesuanphoto` varchar(200) NOT NULL,
+  `pphoto` varchar(200) NOT NULL,
+  `plitphoto` varchar(2000) NOT NULL,
+  `pmedphoto` varchar(2000) NOT NULL,
+  `pbigphoto` varchar(2000) NOT NULL,
+  `pcolor` varchar(64) NOT NULL,
+  `pscprice` int(11) NOT NULL,
+  `pspprice` int(11) NOT NULL,
+  `pzhekou` int(11) NOT NULL,
+  `psum` varchar(64) NOT NULL,
+  `psales` int(11) NOT NULL,
+  `pjieshao` varchar(2000) NOT NULL,
+  `ptuijian`varchar(64) NOT NULL,
+  `starttime` varchar(64) NOT NULL,
+  `endtime`varchar(64) NOT NULL,
+  PRIMARY KEY (`pid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+
+/*
+	7.商品独有信息
+*/
+DROP TABLE IF EXISTS `wwc_spduyouinfo`;
+CREATE TABLE `wwc_spduyouinfo` (
+  `dyid` int(11) NOT NULL AUTO_INCREMENT,					
+  `pid` int(11) NOT NULL,
+  `jibeninfo` varchar(64) NOT NULL,
+  `spzhishu` varchar(64) NOT NULL,
+  `sizes` varchar(64) NOT NULL,
+  PRIMARY KEY (`dyid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+/*
+	8.品牌管理
+*/
+DROP TABLE IF EXISTS `wwc_ppgl`;
+CREATE TABLE `wwc_ppgl` (
+  `ppid` int(11) NOT NULL AUTO_INCREMENT,					
+  `ppname` varchar(200) NOT NULL,
+  `pplogo` varchar(200) NOT NULL,
+  `ppphoto` varchar(2000) NOT NULL,
+  `ppdalei` varchar(40) NOT NULL,
+  `ppchandi` varchar(50) NOT NULL,
+  `ppstart` varchar(50) NOT NULL,
+  `pptime` varchar(50) NOT NULL,
+  `ppjj` varchar(50) NOT NULL,
+  `ppjs` varchar(4000) NOT NULL,
+  PRIMARY KEY (`ppid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+/*
+	9.支付方式表
+*/
+DROP TABLE IF EXISTS `wwc_zhifu`;
+CREATE TABLE `wwc_zhifu` (
+  `zfid` int(11) NOT NULL AUTO_INCREMENT,					
+  `zfname` varchar(50) NOT NULL,
+  `zfphoto` varchar(200) NOT NULL,
+  `zfstate` varchar(50) NOT NULL,
+  PRIMARY KEY (`zfid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+/*
+	10.送货方式表
+*/
+DROP TABLE IF EXISTS `wwc_songhuo`;
+CREATE TABLE `wwc_songhuo` (
+  `shid` int(11) NOT NULL AUTO_INCREMENT,					
+  `shname` varchar(50) NOT NULL,
+  `jiage` decimal(9,2) NOT NULL,
+  `shuoming` varchar(500) NOT NULL,
+  `beizhu` varchar(500) NOT NULL,
+  `state` varchar(50) NOT NULL,
+  PRIMARY KEY (`shid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+/*
+	11.订单表
+*/
+DROP TABLE IF EXISTS `wwc_orderdetails`;
+CREATE TABLE `wwc_orderdetails` (
+  `odtsid` int(11) NOT NULL AUTO_INCREMENT,					
+  `odid` int(11) NOT NULL,
+  `spid` int(11) NOT NULL,
+  `spsum` int(11) NOT NULL,
+  `spzongjia` decimal(9,2) NOT NULL,
+  PRIMARY KEY (`odtsid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+/*
+	12.订单详情表
+*/
+DROP TABLE IF EXISTS `wwc_orders`;
+CREATE TABLE `wwc_orders` (
+  `odid` int(11) NOT NULL AUTO_INCREMENT,					
+  `uid` int(11) NOT NULL,
+  `oprice` decimal(9,2) NOT NULL,
+  `hyprice` decimal(9,2) NOT NULL,
+  `otime` varchar(50) NOT NULL,
+  `shid` int(11) NOT NULL,
+  `shtime` varchar(50) NOT NULL,
+  `zfid` int(11) NOT NULL,
+  `ostate` varchar(50) NOT NULL,
+  `odeal` varchar(50) DEFAULT NULL,
+  `odeal1` varchar(50) DEFAULT NULL,
+  `time1` varchar(50) DEFAULT NULL,
+  `odeal2` varchar(50) DEFAULT NULL,
+  `time2` varchar(50) DEFAULT NULL,
+  `odral3` varchar(50) DEFAULT NULL,
+  `time3` varchar(50) DEFAULT NULL,
+  `odeal4` varchar(50) DEFAULT NULL,
+  `time4` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`odid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+/*
+	13.品牌公告表
+*/
+DROP TABLE IF EXISTS `wwc_ppgg`;
+CREATE TABLE `wwc_ppgg` (
+  `ppggid` int(11) NOT NULL AUTO_INCREMENT,					
+  `ppid` int(11) NOT NULL,
+  `ppggtitle` varchar(200) NOT NULL,
+  `ppggcont` varchar(2000) NOT NULL,
+  `ppggphoto` varchar(200) NOT NULL,
+  `ppggtime` varchar(50) NOT NULL,
+  `ppggstate` varchar(10) NOT NULL,
+  PRIMARY KEY (`ppggid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+/*
+	14.收货人信息表
+*/
+DROP TABLE IF EXISTS `wwc_shrinfo`;
+CREATE TABLE `wwc_shrinfo` (
+  `shrid` int(11) NOT NULL AUTO_INCREMENT,					
+  `uid` int(11) NOT NULL,
+  `shrname` varchar(50) NOT NULL,
+  `shraddre` varchar(200) NOT NULL,
+  `postcode` varchar(50) NOT NULL,
+  `shrtel` varchar(50) NOT NULL,
+  `definfo` varchar(50) NOT NULL,
+  PRIMARY KEY (`shrid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+/*
+	15.收藏商品/品牌表
+*/
+DROP TABLE IF EXISTS `wwc_pcollect`;
+CREATE TABLE `wwc_pcollect` (
+  `cid` int(11) NOT NULL AUTO_INCREMENT,					
+  `uid` int(11) NOT NULL,
+  `spid` varchar(50) NOT NULL,
+  `ctime` varchar(200) NOT NULL,
+  PRIMARY KEY (`cid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+/*
+	16.站内公告
+*/
+DROP TABLE IF EXISTS `wwc_gonggao`;
+CREATE TABLE `wwc_gonggao` (
+  `ggid` int(11) NOT NULL AUTO_INCREMENT,					
+  `ggposition` int(11) NOT NULL,
+  `ggtitle` varchar(50) NOT NULL,
+  `ggcont` varchar(200) NOT NULL,
+  `ggphoto` varchar(200) NOT NULL,
+  `fabutime` varchar(200) NOT NULL,
+  `beizhu` varchar(200) NOT NULL,
+  `ggstate` varchar(200) NOT NULL,
+  PRIMARY KEY (`ggid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+/*
+	17.购物车
+*/
+DROP TABLE IF EXISTS `wwc_gwche`;
+CREATE TABLE `wwc_gwche` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,					
+  `spid` int(11) NOT NULL,
+  `spcount` int(11) NOT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+/*
+	18.体验报告表
+*/
+DROP TABLE IF EXISTS `wwc_tybaogao`;
+CREATE TABLE `wwc_tybaogao` (
+  `bgid` int(11) NOT NULL AUTO_INCREMENT,					
+  `uid` int(11) NOT NULL,
+  `spid` int(11) NOT NULL,
+  `bgcont` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`bgid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+/*
+	19.订阅邮件表
+*/
+DROP TABLE IF EXISTS `wwc_dyemail`;
+CREATE TABLE `wwc_dyemail` (
+  `uid` int(11) NOT NULL ,					
+  `email1` varchar(50) DEFAULT NULL,
+  `email2` varchar(50) DEFAULT NULL,
+  `email3` varchar(50) DEFAULT NULL,
+  `email4` varchar(50) DEFAULT NULL,
+  `email5` varchar(50) DEFAULT NULL,
+   PRIMARY KEY (`uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+
+/*
+	20.站内通知表
+*/
+DROP TABLE IF EXISTS `wwc_znmsg`;
+CREATE TABLE `wwc_znmsg` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT ,					
+  `mid` varchar(50) DEFAULT NULL,
+  `mtitle` varchar(50) DEFAULT NULL,
+  `mcontent` varchar(50) DEFAULT NULL,
+  `mtime` varchar(50) DEFAULT NULL,
+  `states` varchar(50) DEFAULT NULL,
+   PRIMARY KEY (`uid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1  DEFAULT CHARSET=utf8;
+
+/*
+	21.后台管理员
+*/
+DROP TABLE IF EXISTS `wwc_admins`;
+CREATE TABLE `wwc_admins` (
+  `aid` int(11) NOT NULL AUTO_INCREMENT ,					
+  `aname` varchar(50) DEFAULT NULL,
+  `apass` varchar(50) DEFAULT NULL,
+  `permissionid` int(11) DEFAULT NULL,
+  `zctime` varchar(50) DEFAULT NULL,
+  `lasttime` varchar(50) DEFAULT NULL,
+   PRIMARY KEY (`aid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1  DEFAULT CHARSET=utf8;
+
+
+/*
+	22.管理员权限表
+*/
+DROP TABLE IF EXISTS `wwc_permission`;
+CREATE TABLE `wwc_permission` (
+  `permissionid` int(11) NOT NULL  AUTO_INCREMENT,					
+  `permissionlabel` varchar(50) DEFAULT NULL,
+  `granter` varchar(50) DEFAULT NULL,
+  `adduser` varchar(50) DEFAULT NULL,
+  `deluser` varchar(50) DEFAULT NULL,
+  `upuser` varchar(50) DEFAULT NULL,
+  `seluser` varchar(50) DEFAULT NULL,
+  `addpp` varchar(50) DEFAULT NULL,
+  `delpp` varchar(50) DEFAULT NULL,
+  `uppp` varchar(50) DEFAULT NULL,
+  `selpp` varchar(50) DEFAULT NULL,
+  `addp` varchar(50) DEFAULT NULL,
+  `delp` varchar(50) DEFAULT NULL,
+  `upp` varchar(50) DEFAULT NULL,
+  `selp` varchar(50) DEFAULT NULL,
+  `addgg` varchar(50) DEFAULT NULL,
+  `delgg` varchar(50) DEFAULT NULL,
+  `upgg` varchar(50) DEFAULT NULL,
+  `selgg` varchar(50) DEFAULT NULL,
+  `addppgg` varchar(50) DEFAULT NULL,
+  `delppgg` varchar(50) DEFAULT NULL,
+  `upppgg` varchar(50) DEFAULT NULL,
+  `selppgg` varchar(50) DEFAULT NULL,
+   PRIMARY KEY (`permissionid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1  DEFAULT CHARSET=utf8;
+
+/*
+	23.省份表
+*/
+DROP TABLE IF EXISTS `wwc_province`;
+CREATE TABLE `wwc_province` (
+  `id` int(11) NOT NULL,					
+  `provinceid` int(11) DEFAULT NULL,
+  `provincename` varchar(50) DEFAULT NULL,
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+/*
+	24.城市表
+*/
+DROP TABLE IF EXISTS `wwc_city`;
+CREATE TABLE `wwc_city` (
+  `id` int(11) NOT NULL  AUTO_INCREMENT,					
+  `cityid` int(11) DEFAULT NULL,
+  `cityname` varchar(50) DEFAULT NULL,
+  `parentid` int(11) DEFAULT NULL,
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1  DEFAULT CHARSET=utf8;
+
+
+/*
+	25.地区表
+*/
+DROP TABLE IF EXISTS `wwc_area`;
+CREATE TABLE `wwc_area` (
+  `id` int(11) NOT NULL  AUTO_INCREMENT,					
+  `areaid` int(11) DEFAULT NULL,
+  `areaname` varchar(50) DEFAULT NULL,
+  `parentid` int(11) DEFAULT NULL,
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1  DEFAULT CHARSET=utf8;
+
+
+
+
+
+
+
+

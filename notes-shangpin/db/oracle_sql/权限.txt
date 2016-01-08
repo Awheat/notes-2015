@@ -1,0 +1,9 @@
+insert into DFY.permission values(DFY.SEQ_PERMISSION_PERMISSIONCODE.nextval,'超级管理员','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1');
+insert into DFY.permission values(DFY.SEQ_PERMISSION_PERMISSIONCODE.nextval,'用户管理员','1','1','1','1','1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0');
+insert into DFY.permission values(DFY.SEQ_PERMISSION_PERMISSIONCODE.nextval,'品牌管理员','1','0','0','0','0','1','1','1','1','0','0','0','0','0','0','0','0','0','0','0','0');
+insert into DFY.permission values(DFY.SEQ_PERMISSION_PERMISSIONCODE.nextval,'商品管理员','1','0','0','0','0','0','0','0','0','1','1','1','1','0','0','0','0','0','0','0','0');
+insert into DFY.permission values(DFY.SEQ_PERMISSION_PERMISSIONCODE.nextval,'公告管理员','1','0','0','0','0','0','0','0','0','0','0','0','0','1','1','1','1','0','0','0','0');
+insert into DFY.permission values(DFY.SEQ_PERMISSION_PERMISSIONCODE.nextval,'品牌公告管理员','1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1','1','1','1');
+
+--后台管理员
+insert into DFY.admins values(DFY.SEQ_ADMINS_ACODE.nextval,'admin','123456','1','7-7月-2012','3-5月-2013');
